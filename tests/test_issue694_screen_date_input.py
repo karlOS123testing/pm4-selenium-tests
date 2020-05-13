@@ -32,11 +32,11 @@ class TestScreenDateInput(BaseTest):
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
 
-        # Wait for Processes page to load
-        self.wait.until(EC.visibility_of_element_located((By.ID, 'sidebar-inner')))
+        # Wait for Designer link to load
+        self.wait.until(EC.element_to_be_clickable((By.LINK_TEXT, 'Designer')))
 
-        # Verify that inner sidebar is displayed
-        self.assertTrue(self.driver.find_element_by_id('sidebar-inner').is_displayed())
+        # Verify that link is clickable
+        self.assertTrue(self.driver.find_element_by_link_text('Designer').is_displayed())
 
 
 if __name__ == "__main__":
