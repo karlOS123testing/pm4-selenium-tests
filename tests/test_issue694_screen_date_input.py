@@ -41,4 +41,4 @@ class TestScreenDateInput(BaseTest):
 
 if __name__ == "__main__":
     import __main__
-    output = run_test(TestLogin, data, __main__)
+    output = run_test(TestScreenDateInput, data, __main__)
