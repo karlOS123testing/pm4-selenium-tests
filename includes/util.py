@@ -46,24 +46,19 @@ def parse_results(buffer):
     else:
         return 'Test failed to execute'
 
-def login(url, workspace, username, password, driver):
+def login(url, username, password, driver):
     ''' Function to log user in to workspace.
     '''
     # Navigate to server
     driver.get(url)
 
-    # Select and submit workspace
-    driver.find_element_by_id('display_select_input').click()
-    driver.find_element_by_link_text(workspace).click()
-    driver.find_element_by_id('sentworkspace').click()
-
     # Wait for login page to load
     wait = WebDriverWait(driver, 30)
-    wait.until(EC.element_to_be_clickable((By.ID, 'form[BSUBMIT]')))
+    wait.until(EC.element_to_be_clickable((By.ID, 'login')))
 
     # Login
-    driver.find_element_by_id('form[USR_USERNAME]').send_keys(username)
-    driver.find_element_by_id('form[USR_PASSWORD_MASK]').send_keys(password)
-    driver.find_element_by_id('form[BSUBMIT]').click()
+    driver.find_element_by_id('username').send_keys(username)
+    driver.find_element_by_id('password').send_keys(password)
+    driver.find_element_by_id('login').click()
 
     return driver
