@@ -54,11 +54,11 @@ def login(url, username, password, driver):
 
     # Wait for login page to load
     wait = WebDriverWait(driver, 30)
-    wait.until(EC.element_to_be_clickable((By.ID, 'login')))
+    wait.until(EC.element_to_be_clickable((By.NAME, 'login')))
 
     # Login
     driver.find_element_by_id('username').send_keys(username)
     driver.find_element_by_id('password').send_keys(password)
-    driver.find_element_by_id('login').click()
+    driver.find_element_by_name('login').click()
 
     return driver
