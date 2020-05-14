@@ -19,8 +19,8 @@ class BaseTest(unittest.TestCase):
         chrome_options.add_argument("--window-size=1920,1080")
         cls.driver = webdriver.Chrome(options=chrome_options)
 
-        # Global driver variable
-        wait = WebDriverWait(cls.driver, 30)
+        # Global driver wait variable
+        cls.wait = WebDriverWait(cls.driver, 30)
 
     @classmethod
     def tearDownClass(cls):
