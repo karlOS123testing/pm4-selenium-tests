@@ -1,0 +1,44 @@
+#!/usr/local/bin/python3
+
+'''
+These lines will run locally, but will not currently work in the Docker image.
+They define the path so that imports from parallel folders can be found.
+from sys import path
+path.append('../')
+'''
+
+import unittest
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from test_parent import BaseTest
+from util import run_test, login
+
+'''
+These are in the format necessary when editing the local path.
+from includes.test_parent import BaseTest
+from includes.util import run_test, login
+'''
+
+
+class TestNavbarRequestButton(BaseTest):
+    ''' Test that the navbar Requests button displays on the Admin page. '''
+
+    def test_navbar_request_button(self):
+        ''' Create User '''
+
+        # Login using configured url, workspace, username, and password
+        self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
+
+        # Wait for Requests page to load until inner sidebar is displayed
+        self.wait.until(EC.visibility_of_element_located((By.ID, 'sidebar-inner')))
+
+        # Click Admin link, wait for +request button to appear to ensure page is loaded 
+        self.driver.find_element_by_link_text("Admin").click()
+        self.wait.until(EC.visibility_of_element_located((By.ID, 'navbar-request-button')))
+        self.assertTrue(self.driver.find_element_by_id('navbar-request-button').is_displayed())
+
+        
+if __name__ == "__main__":
+    import __main__
+    output = run_test(TestNavbarRequestButton, data, __main__)
