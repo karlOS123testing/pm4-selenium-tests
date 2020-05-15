@@ -2,5 +2,9 @@
   {
     "name": "issue694-screen-date-input",
     "path": "tests/test_issue694_screen_date_input.py"
+  },
+  {
+    "name": "test-sidebar-displayed",
+    "path": "tests/test_sidebar_displayed.py"
   }
 ]
