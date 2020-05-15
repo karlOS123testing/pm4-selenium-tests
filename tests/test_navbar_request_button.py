@@ -22,10 +22,10 @@ from includes.util import run_test, login
 
 
 class TestNavbarRequestButton(BaseTest):
-    ''' Test that the navbar Requests button displays on the Admin page. '''
+    ''' Navigate to the Admin page. '''
 
     def test_navbar_request_button(self):
-        ''' Create User '''
+        ''' Test that navbar request button displays on Admin page. '''
 
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
