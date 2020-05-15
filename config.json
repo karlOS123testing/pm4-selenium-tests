@@ -9,6 +9,6 @@
   },
   {
     "name": "test-avatar-button",
-    "path": "tests/test_avatar_button.py",
+    "path": "tests/test_avatar_button.py"
   }
 ]
