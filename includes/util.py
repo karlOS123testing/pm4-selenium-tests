@@ -41,10 +41,10 @@ def parse_results(buffer):
 
     if buffer.startswith('.'):
         return 'SUCCESS'
-    elif buffer.startswith('E'):
+    elif buffer.startswith('F'):
         return 'FAIL'
     else:
-        return 'Test failed to execute'
+        return 'ERROR'
 
 def login(url, username, password, driver):
     ''' Function to log user in to workspace.
