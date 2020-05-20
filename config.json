@@ -4,6 +4,14 @@
     "path": "tests/test_issue694_screen_date_input.py"
   },
   {
+    "name": "test-navbar-request-button",
+    "path": "tests/test_navbar_request_button.py"
+  },
+  {
+    "name": "test-avatar-button",
+    "path": "tests/test_avatar_button.py"
+  },
+  {
     "name": "test-sidebar-displayed",
     "path": "tests/test_sidebar_displayed.py"
   }
