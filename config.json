@@ -10,5 +10,9 @@
   {
     "name": "test-avatar-button",
     "path": "tests/test_avatar_button.py"
+  },
+  {
+    "name": "test-sidebar-displayed",
+    "path": "tests/test_sidebar_displayed.py"
   }
 ]
