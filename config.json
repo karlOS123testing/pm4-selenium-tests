@@ -17,10 +17,10 @@
   },
   {
     "name": "test-that-fails",
-    "path": "tests/test_that_fails.py"
+    "path": "tests/test-failing-conditions/test_that_fails.py"
   },
   {
     "name": "test-that-doesnt-run",
-    "path": "tests/test_that_doesnt_run.py"
+    "path": "tests/test-failing-conditions/test_that_doesnt_run.py"
   }
 ]
