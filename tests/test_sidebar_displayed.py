@@ -1,24 +1,22 @@
 #!/usr/local/bin/python3
 
-'''
-These lines will run locally, but will not currently work in the Docker image.
-They define the path so that imports from parallel folders can be found.
-from sys import path
-path.append('../')
-'''
+# Check if using local environment
+from os import getenv
+
+if getenv('ENVIRONMENT') != 'local':
+    from test_parent import BaseTest
+    from util import run_test, login
+# If using local environment
+else:
+    from sys import path
+    path.append('../')
+    from includes.test_parent import BaseTest
+    from includes.util import run_test, login
 
 import unittest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from test_parent import BaseTest
-from util import run_test, login
-
-'''
-These are in the format necessary when editing the local path.
-from includes.test_parent import BaseTest
-from includes.util import run_test, login
-'''
 
 
 class TestSidebarDisplayed(BaseTest):
