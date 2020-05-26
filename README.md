@@ -30,11 +30,19 @@ You can develop and run tests locally. In order to do so, you must have the foll
 
 * [Homebrew](https://brew.sh) (macOS only)
 
-#### Installing & Running Locally
+#### Installing Locally
 
 * Install pip && `pip install selenium`
 * `brew cask install chromedriver` (macOS only)
 * Add chromedriver to PATH
 * Clone the repository into a directory
-* Navigate to tests folder
-* Execute test file using `python3 test_file.py`
+
+#### Running and Writing Tests Locally
+
+* Create `__init__.py` in root directory
+* Write and save these lines:
+  * `from os import environ`
+  * `environ['ENVIRONMENT'] = 'local'`
+  * `data = {"server_url": "your/pm4/server/url/here", "username": "your/username/here", "password": "your/password/here"}`
+* Navigate to `/tests` folder
+* Execute test with `ENVIRONMENT='local' ./test_you_want_to_run.py`
