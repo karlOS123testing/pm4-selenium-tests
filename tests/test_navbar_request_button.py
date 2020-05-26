@@ -12,6 +12,7 @@ else:
     path.append('../')
     from includes.test_parent import BaseTest
     from includes.util import run_test, login
+    from __init__ import data
 
 import unittest
 from selenium.webdriver.support.ui import WebDriverWait
