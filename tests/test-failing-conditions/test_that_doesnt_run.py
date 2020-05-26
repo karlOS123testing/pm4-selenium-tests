@@ -14,6 +14,8 @@ else:
     from includes.util import run_test, login
     from __init__ import data
 
+from selenium.webdriver.support import expected_conditions as EC
+
 
 class TestSidebarDisplayed(BaseTest):
     ''' Test that sidebar is displayed on Requests page. '''
