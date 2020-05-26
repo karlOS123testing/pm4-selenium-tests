@@ -7,12 +7,16 @@ from sys import path
 path.append('../')
 '''
 
-import unittest
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from test_parent import BaseTest
-from util import run_test, login
+if getenv('ENVIRONMENT') != 'local':
+    from test_parent import BaseTest
+    from util import run_test, login
+# If using local environment
+else:
+    from sys import path
+    path.append('../')
+    from includes.test_parent import BaseTest
+    from includes.util import run_test, login
+    from __init__ import data
 
 '''
 These are in the format necessary when editing the local path.
