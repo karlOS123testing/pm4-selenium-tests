@@ -46,3 +46,4 @@ You can develop and run tests locally. In order to do so, you must have the foll
   * `data = {"server_url": "your/pm4/server/url/here", "username": "your/username/here", "password": "your/password/here"}`
 * Navigate to `/tests` folder
 * Execute test with `ENVIRONMENT='local' ./test_you_want_to_run.py`
+  * Note: If test is not executable, run `chmod +x test_you_want_to_run.py`
