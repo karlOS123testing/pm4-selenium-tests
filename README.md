@@ -47,3 +47,6 @@ You can develop and run tests locally. In order to do so, you must have the foll
 * Navigate to `/tests` folder
 * Execute test with `ENVIRONMENT='local' ./test_you_want_to_run.py`
   * Note: If test is not executable, run `chmod +x test_you_want_to_run.py`
+
+Note: If you want to view the tests running in the browser, comment out this line in `/includes/test_parent.py`:
+  * `# chrome_options.add_argument("--headless")`
