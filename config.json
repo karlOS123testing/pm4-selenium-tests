@@ -16,6 +16,10 @@
     "path": "tests/test_sidebar_displayed.py"
   },
   {
+    "name": "test-long-user-name-in-search-bar",
+    "path": "tests/test-admin/test_TCP4_33.py"
+  },
+  {
     "name": "test-that-fails",
     "path": "tests/test-failing-conditions/test_that_fails.py"
   },
