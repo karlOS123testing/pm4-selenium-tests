@@ -44,8 +44,8 @@
      "path": "tests/test-admin/test_TCP4_69.py"		
    },		
    {
-     "name": "test-long-group-name-in-edit-group-name-field",		     "name": "test-long-group-name-in-edit-group-name-field",
-     "path": "tests/test-admin/test_TCP4_70.py"		     "path": "tests/test-admin/test_TCP4_70.py"
+     "name": "test-long-group-name-in-edit-group-name-field",
+     "path": "tests/test-admin/test_TCP4_70.py"
    },		
    {		
      "name": "test-that-fails",		
