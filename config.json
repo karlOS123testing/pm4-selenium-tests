@@ -40,6 +40,10 @@
     "path": "tests/test-admin/test_TCP4_60.py"
   },
   {
+    "name": "test-long-search-text-in-groups-search-bar",
+    "path": "tests/test-admin/test_TCP4_69.py"
+  },
+  {
     "name": "test-that-fails",
     "path": "tests/test-failing-conditions/test_that_fails.py"
   },
