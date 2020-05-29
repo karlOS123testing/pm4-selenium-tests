@@ -53,9 +53,8 @@ class TestEditGroupNameInputField(BaseTest):
         name_field.clear()
         name_field.send_keys(long_group_name)
         self.assertEqual(long_group_name, name_field.get_property('value'))
-        
+
 
 if __name__ == "__main__":
     import __main__
     output = run_test(TestEditGroupNameInputField, data, __main__)
-    print(output)
