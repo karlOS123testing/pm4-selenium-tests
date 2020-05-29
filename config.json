@@ -28,6 +28,10 @@
     "path": "tests/test-admin/test_TCP4_49.py"
   },
   {
+    "name": "test-long-email-in-forgotten-password-email-field",
+    "path": "tests/test-admin/test_TCP4_52.py"
+  },
+  {
     "name": "test-that-fails",
     "path": "tests/test-failing-conditions/test_that_fails.py"
   },
