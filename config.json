@@ -2,5 +2,17 @@
   {
     "name": "test-long-group-name-in-edit-group-name-field",
     "path": "tests/test-admin/test_TCP4_70.py"
+  },
+  {
+    "name": "test-long-group-description-in-edit-group-description-field",
+    "path": "tests/test-admin/test_TCP4_71.py"
+  },
+  {
+    "name": "test-long-name-in-new-auth-client-name-input-field",
+    "path": "tests/test-admin/test_TCP4_94.py"
+  },
+  {
+    "name": "test-long-redirect-url-in-new-auth-client-redirect-url-input-field",
+    "path": "tests/test-admin/test_TCP4_95.py"
   }
 ]
