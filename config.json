@@ -36,6 +36,10 @@
     "path": "tests/test-admin/test_TCP4_59.py"
   },
   {
+    "name": "test-long-description-in-new-group-description-field",
+    "path": "tests/test-admin/test_TCP4_60.py"
+  },
+  {
     "name": "test-that-fails",
     "path": "tests/test-failing-conditions/test_that_fails.py"
   },
