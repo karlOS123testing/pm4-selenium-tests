@@ -14,5 +14,17 @@
    {
      "name": "test-long-phone-string-in-edit-user-form",
      "path": "tests/test-admin/test_TCP4_29.py"
+   },
+   {
+     "name": "test-long-address-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_30.py"
+   },
+   {
+     "name": "test-long-postal-code-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_31.py"
+   },
+   {
+     "name": "test-long-city-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_32.py"
    }
 ]
