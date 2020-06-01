@@ -20,6 +20,22 @@
       "path": "tests/test-admin/test_TCP4_23.py"
     },
     {
+      "name": "test-long-last-name-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_3.py"
+    },
+    {
+      "name": "test-long-email-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_4.py"
+    },
+    {
+      "name": "test-long-password-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_5.py"
+    },
+    {
+      "name": "test-long-confirm-password-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_6.py"
+    },
+    {
       "name": "test-long-first-name-in-edit-user-form",
       "path": "tests/test-admin/test_TCP4_24.py"
     },
