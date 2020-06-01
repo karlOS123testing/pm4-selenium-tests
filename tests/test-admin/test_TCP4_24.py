@@ -24,10 +24,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 class TestEditUserUsernameInputField(BaseTest):
-    ''' Navigate to the Users page, edit first user and test the username input field. '''
+    ''' Navigate to the Users page, edit first user and test the first name input field. '''
 
     def test_that_edit_user_username_input_field_accepts_long_strings(self):
-        ''' Verify that a string 61+ characters long will be accepted in the edit user username input field.'''
+        ''' Verify that a string 61+ characters long will be accepted in the edit user first name input field.'''
         
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
@@ -43,7 +43,7 @@ class TestEditUserUsernameInputField(BaseTest):
         self.driver.find_element_by_class_name('fa-pen-square').click()
         self.wait.until(EC.visibility_of_element_located((By.ID, 'firstname')))
 
-        # Clear username field and verify that long string input works
+        # Clear first name field and verify that long string input works
         long_first_name = ''.join(random.choice(string.ascii_letters) for n in range(65))
         first_name_field = self.driver.find_element_by_id('firstname')
         first_name_field.clear()
