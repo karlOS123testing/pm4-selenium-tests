@@ -1,14 +1,18 @@
 [
    {
-     "name": "test-long-address-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_30.py"
+     "name": "test-long-state-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_732.py"
    },
    {
-     "name": "test-long-postal-code-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_31.py"
+     "name": "test-long-job-title-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_733.py"
    },
    {
-     "name": "test-long-city-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_32.py"
+     "name": "test-long-fax-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_734.py"
+   },
+   {
+     "name": "test-long-cell-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_735.py"
    }
 ]
