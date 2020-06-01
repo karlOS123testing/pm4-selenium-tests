@@ -26,7 +26,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class TestEditAuthClientNameInputField(BaseTest):
     ''' Navigate to the Auth Clients page, edit an auth client and test the name input field. '''
 
-    def test_that_new_auth_client_name_input_field_accepts_long_strings(self):
+    def test_that_edit_auth_client_name_input_field_accepts_long_strings(self):
         ''' Verify that a string 61+ characters long will be accepted in the edit auth client name input field.'''
         
         # Login using configured url, workspace, username, and password
