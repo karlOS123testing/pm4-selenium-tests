@@ -14,5 +14,9 @@
    {
      "name": "test-long-first-name-in-edit-user-form",
      "path": "tests/test-admin/test_TCP4_24.py"
+   },
+   {
+     "name": "test-long-last-name-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_25.py"
    }
  ]
