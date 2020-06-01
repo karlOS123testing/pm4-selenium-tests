@@ -42,10 +42,6 @@
    {		
      "name": "test-long-search-text-in-groups-search-bar",		
      "path": "tests/test-admin/test_TCP4_69.py"		
-   },		
-   {
-     "name": "test-long-group-name-in-edit-group-name-field",
-     "path": "tests/test-admin/test_TCP4_70.py"
    },
    {
      "name": "test-long-group-name-in-edit-group-name-field",
