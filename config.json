@@ -1,10 +1,18 @@
 [
   {
-    "name": "test-long-name-in-edit-auth-form",
-    "path": "tests/test-admin/test_TCP4_736.py"
+    "name": "test-long-last-name-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_3.py"
   },
   {
-    "name": "test-long-redirect-url-in-edit-auth-form",
-    "path": "tests/test-admin/test_TCP4_737.py"
+    "name": "test-long-email-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_4.py"
+  },
+  {
+    "name": "test-long-password-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_5.py"
+  },
+  {
+    "name": "test-long-confirm-password-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_6.py"
   }
 ]
