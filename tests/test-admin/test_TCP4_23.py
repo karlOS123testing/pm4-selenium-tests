@@ -54,3 +54,4 @@ class TestEditUserUsernameInputField(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestEditUserUsernameInputField, data, __main__)
+    
