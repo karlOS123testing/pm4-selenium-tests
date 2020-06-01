@@ -1,18 +1,18 @@
 [
-   {
-     "name": "test-long-state-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_732.py"
-   },
-   {
-     "name": "test-long-job-title-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_733.py"
-   },
-   {
-     "name": "test-long-fax-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_734.py"
-   },
-   {
-     "name": "test-long-cell-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_735.py"
-   }
+  {
+    "name": "test-long-last-name-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_3.py"
+  },
+  {
+    "name": "test-long-email-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_4.py"
+  },
+  {
+    "name": "test-long-password-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_5.py"
+  },
+  {
+    "name": "test-long-confirm-password-in-new-user-form",
+    "path": "tests/test-admin/test_TCP4_6.py"
+  }
 ]

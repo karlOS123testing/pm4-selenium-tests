@@ -1,23 +1,23 @@
-[
-    {				
-      "name": "issue694-screen-date-input",				
-      "path": "tests/test_issue694_screen_date_input.py"				
-    },				
-    {				
-      "name": "test-navbar-request-button",				
-      "path": "tests/test_navbar_request_button.py"				
-    },				
-    {				
-      "name": "test-avatar-button",				
-      "path": "tests/test_avatar_button.py"				
-    },				
-    {				
-      "name": "test-sidebar-displayed",				
-      "path": "tests/test_sidebar_displayed.py"				
-    },	
+[	
     {
       "name": "test-long-username-in-edit-user-form",
       "path": "tests/test-admin/test_TCP4_23.py"
+    },
+    {
+      "name": "test-long-last-name-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_3.py"
+    },
+    {
+      "name": "test-long-email-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_4.py"
+    },
+    {
+      "name": "test-long-password-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_5.py"
+    },
+    {
+      "name": "test-long-confirm-password-in-new-user-form",
+      "path": "tests/test-admin/test_TCP4_6.py"
     },
     {
       "name": "test-long-first-name-in-edit-user-form",
@@ -114,6 +114,14 @@
     {
       "name": "test-long-cell-in-edit-user-form",
       "path": "tests/test-admin/test_TCP4_735.py"
+    },
+    {
+      "name": "test-long-name-in-edit-auth-form",
+      "path": "tests/test-admin/test_TCP4_736.py"
+    },
+    {
+      "name": "test-long-redirect-url-in-edit-auth-form",
+      "path": "tests/test-admin/test_TCP4_737.py"
     },
     {				
       "name": "test-that-fails",				
