@@ -1,6 +1,18 @@
 [
    {
-     "name": "test-long-email-string-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_26.py"
+     "name": "test-long-state-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_732.py"
+   },
+   {
+     "name": "test-long-job-title-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_733.py"
+   },
+   {
+     "name": "test-long-fax-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_734.py"
+   },
+   {
+     "name": "test-long-cell-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_735.py"
    }
 ]
