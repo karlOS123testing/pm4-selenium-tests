@@ -1,56 +1,4 @@
 [
-   {		
-     "name": "issue694-screen-date-input",		
-     "path": "tests/test_issue694_screen_date_input.py"		
-   },		
-   {		
-     "name": "test-navbar-request-button",		
-     "path": "tests/test_navbar_request_button.py"		
-   },		
-   {		
-     "name": "test-avatar-button",		
-     "path": "tests/test_avatar_button.py"		
-   },		
-   {		
-     "name": "test-sidebar-displayed",		
-     "path": "tests/test_sidebar_displayed.py"		
-   },		
-   {		
-     "name": "test-long-user-name-in-search-bar",		
-     "path": "tests/test-admin/test_TCP4_33.py"		
-   },		
-   {		
-     "name": "test-long-user-name-in-login-username-field",		
-     "path": "tests/test-admin/test_TCP4_48.py"		
-   },		
-   {		
-     "name": "test-long-password-in-password-field",		
-     "path": "tests/test-admin/test_TCP4_49.py"		
-   },		
-   {		
-     "name": "test-long-email-in-forgotten-password-email-field",		
-     "path": "tests/test-admin/test_TCP4_52.py"		
-   },		
-   {		
-     "name": "test-long-name-in-new-group-name-field",		
-     "path": "tests/test-admin/test_TCP4_59.py"		
-   },		
-   {		
-     "name": "test-long-description-in-new-group-description-field",		
-     "path": "tests/test-admin/test_TCP4_60.py"		
-   },		
-   {		
-     "name": "test-long-search-text-in-groups-search-bar",		
-     "path": "tests/test-admin/test_TCP4_69.py"		
-   },
-   {
-     "name": "test-long-group-name-in-edit-group-name-field",
-     "path": "tests/test-admin/test_TCP4_70.py"
-   },
-   {
-     "name": "test-long-group-description-in-edit-group-description-field",
-     "path": "tests/test-admin/test_TCP4_71.py"
-   },
    {
      "name": "test-long-name-in-new-auth-client-name-input-field",
      "path": "tests/test-admin/test_TCP4_94.py"
@@ -58,13 +6,5 @@
    {
      "name": "test-long-redirect-url-in-new-auth-client-redirect-url-input-field",
      "path": "tests/test-admin/test_TCP4_95.py"
-   },
-   {		
-     "name": "test-that-fails",		
-     "path": "tests/test-failing-conditions/test_that_fails.py"		
-   },		
-   {		
-     "name": "test-that-doesnt-run",		
-     "path": "tests/test-failing-conditions/test_that_doesnt_run.py"		
    }
  ]
