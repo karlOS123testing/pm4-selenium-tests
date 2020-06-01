@@ -6,5 +6,13 @@
    {
      "name": "test-long-password-string-in-edit-user-form",
      "path": "tests/test-admin/test_TCP4_27.py"
+   },
+   {
+     "name": "test-long-confirm-password-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_28.py"
+   },
+   {
+     "name": "test-long-phone-string-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_29.py"
    }
 ]
