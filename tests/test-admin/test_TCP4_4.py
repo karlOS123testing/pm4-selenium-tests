@@ -35,7 +35,7 @@ class TestNewUserEmailInputField(BaseTest):
         # Wait for Requests page to load until inner sidebar is displayed
         self.wait.until(EC.visibility_of_element_located((By.ID, 'sidebar-inner')))
 
-        # Click Admin link, wait for Edit User button to be clickable 
+        # Click Admin link, wait for +User button to be clickable 
         self.driver.find_element_by_link_text("Admin").click()
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-secondary']")))
 
