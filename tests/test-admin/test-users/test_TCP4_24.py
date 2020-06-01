@@ -23,10 +23,10 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-class TestEditUserUsernameInputField(BaseTest):
+class TestEditUserFirstNameInputField(BaseTest):
     ''' Navigate to the Users page, edit first user and test the first name input field. '''
 
-    def test_that_edit_user_username_input_field_accepts_long_strings(self):
+    def test_that_edit_user_first_name_input_field_accepts_long_strings(self):
         ''' Verify that a string 61+ characters long will be accepted in the edit user first name input field.'''
         
         # Login using configured url, workspace, username, and password
@@ -53,4 +53,4 @@ class TestEditUserUsernameInputField(BaseTest):
 
 if __name__ == "__main__":
     import __main__
-    output = run_test(TestEditUserUsernameInputField, data, __main__)
+    output = run_test(TestEditUserFirstNameInputField, data, __main__)

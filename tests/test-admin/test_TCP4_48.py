@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-""" Class to test the user search text field.
+""" Class to test the login page username field.
 """
 
 # Check if using local environment
