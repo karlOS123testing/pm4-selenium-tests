@@ -1,22 +1,6 @@
 [
    {
-     "name": "test-long-name-in-new-auth-client-name-input-field",
-     "path": "tests/test-admin/test_TCP4_94.py"
-   },
-   {
-     "name": "test-long-redirect-url-in-new-auth-client-redirect-url-input-field",
-     "path": "tests/test-admin/test_TCP4_95.py"
-   },
-   {
-     "name": "test-long-username-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_23.py"
-   },
-   {
-     "name": "test-long-first-name-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_24.py"
-   },
-   {
-     "name": "test-long-last-name-in-edit-user-form",
-     "path": "tests/test-admin/test_TCP4_25.py"
+     "name": "test-long-email-string-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_26.py"
    }
- ]
+]
