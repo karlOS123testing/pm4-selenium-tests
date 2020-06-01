@@ -2,5 +2,9 @@
    {
      "name": "test-long-email-string-in-edit-user-form",
      "path": "tests/test-admin/test_TCP4_26.py"
+   },
+   {
+     "name": "test-long-password-string-in-edit-user-form",
+     "path": "tests/test-admin/test_TCP4_27.py"
    }
 ]
