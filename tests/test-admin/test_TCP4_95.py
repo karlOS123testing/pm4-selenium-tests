@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-""" Class to test the user search text field.
+""" Class to test the new auth client redirect url field.
 """
 
 # Check if using local environment
@@ -24,10 +24,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 class TestNewAuthClientRedirectURLField(BaseTest):
-    ''' Navigate to the Auth Clients page, create new auth client and test the name input field. '''
+    ''' Navigate to the Auth Clients page, create new auth client and test the redirect url input field. '''
 
     def test_that_new_auth_client_redirect_url_input_field_accepts_long_strings(self):
-        ''' Verify that a string 61+ characters long will be accepted in the new auth client name input field.'''
+        ''' Verify that a string 61+ characters long will be accepted in the new auth client redirect url input field.'''
         
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
