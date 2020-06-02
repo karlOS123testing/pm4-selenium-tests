@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-""" Class to test the user search text field.
+""" Class to test the new group description field.
 """
 
 # Check if using local environment
@@ -24,10 +24,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 class TestNewGroupDescriptionInputField(BaseTest):
-    ''' Navigate to the Add New Group form and test the name input field. '''
+    ''' Navigate to the Add New Group form and test the description input field. '''
 
     def test_that_new_group_description_field_accepts_long_strings(self):
-        ''' Verify that a string 91+ characters long will be accepted in the group name field.'''
+        ''' Verify that a string 91+ characters long will be accepted in the group description field.'''
         
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
@@ -48,7 +48,7 @@ class TestNewGroupDescriptionInputField(BaseTest):
         self.wait.until(EC.visibility_of_element_located((By.ID, 'description')))
 
 
-        # Create long group name and verify user can enter a long group name into name input field
+        # Create long group description and verify user can enter a long group name into name input field
         long_group_description = ''.join(random.choice(string.ascii_letters) for n in range(95))
         self.driver.find_element_by_id('description').send_keys(long_group_description)
         name_field = self.driver.find_element_by_id('description')
