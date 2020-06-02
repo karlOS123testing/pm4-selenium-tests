@@ -19,7 +19,6 @@ else:
 import unittest
 import string
 import random
-from re import sub
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
