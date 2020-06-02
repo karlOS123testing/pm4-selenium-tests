@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-""" Class to test the user search text field.
+""" Class to test the groups search text field.
 """
 
 # Check if using local environment
