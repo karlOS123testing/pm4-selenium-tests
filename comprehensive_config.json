@@ -73,23 +73,23 @@
     },				
     {				
       "name": "test-long-name-in-new-group-name-field",				
-      "path": "tests/test-admin/test_TCP4_59.py"				
+      "path": "tests/test-admin/test-groups/test_TCP4_59.py"				
     },				
     {				
       "name": "test-long-description-in-new-group-description-field",				
-      "path": "tests/test-admin/test_TCP4_60.py"				
+      "path": "tests/test-admin/test-groups/test_TCP4_60.py"				
     },				
     {				
       "name": "test-long-search-text-in-groups-search-bar",				
-      "path": "tests/test-admin/test_TCP4_69.py"				
+      "path": "tests/test-admin/test-groups/test_TCP4_69.py"				
     },		
     {		
       "name": "test-long-group-name-in-edit-group-name-field",		
-      "path": "tests/test-admin/test_TCP4_70.py"		
+      "path": "tests/test-admin/test-groups/test_TCP4_70.py"		
     },		
     {		
       "name": "test-long-group-description-in-edit-group-description-field",		
-      "path": "tests/test-admin/test_TCP4_71.py"		
+      "path": "tests/test-admin/test-groups/test_TCP4_71.py"		
     },		
     {
       "name": "test-long-name-in-new-auth-client-name-input-field",
