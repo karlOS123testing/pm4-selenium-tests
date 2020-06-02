@@ -93,11 +93,11 @@
     },		
     {
       "name": "test-long-name-in-new-auth-client-name-input-field",
-      "path": "tests/test-admin/test_TCP4_94.py"
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_94.py"
     },
     {
       "name": "test-long-redirect-url-in-new-auth-client-redirect-url-input-field",
-      "path": "tests/test-admin/test_TCP4_95.py"
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_95.py"
     },
     {
       "name": "test-long-state-in-edit-user-form",
@@ -117,11 +117,11 @@
     },
     {
       "name": "test-long-name-in-edit-auth-form",
-      "path": "tests/test-admin/test_TCP4_736.py"
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_736.py"
     },
     {
       "name": "test-long-redirect-url-in-edit-auth-form",
-      "path": "tests/test-admin/test_TCP4_737.py"
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_737.py"
     },
     {				
       "name": "test-that-fails",				
