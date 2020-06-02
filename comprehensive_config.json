@@ -100,6 +100,10 @@
       "path": "tests/test-admin/test-auth-clients/test_TCP4_95.py"
     },
     {
+      "name": "test-new-user-created-successfully",
+      "path": "tests/test-admin/test-users/test_TCP4_606.py"
+    },
+    {
       "name": "test-long-state-in-edit-user-form",
       "path": "tests/test-admin/test-users/test_TCP4_732.py"
     },

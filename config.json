@@ -1,18 +1,6 @@
 [
   {
-    "name": "test-long-last-name-in-new-user-form",
-    "path": "tests/test-admin/test_TCP4_3.py"
-  },
-  {
-    "name": "test-long-email-in-new-user-form",
-    "path": "tests/test-admin/test_TCP4_4.py"
-  },
-  {
-    "name": "test-long-password-in-new-user-form",
-    "path": "tests/test-admin/test_TCP4_5.py"
-  },
-  {
-    "name": "test-long-confirm-password-in-new-user-form",
-    "path": "tests/test-admin/test_TCP4_6.py"
+    "name": "test-new-user-created-successfully",
+    "path": "tests/test-admin/test-users/test_TCP4_606.py"
   }
 ]
