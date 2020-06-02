@@ -61,15 +61,15 @@
     },				
     {				
       "name": "test-long-user-name-in-login-username-field",				
-      "path": "tests/test-admin/test_TCP4_48.py"				
+      "path": "tests/test-login/test_TCP4_48.py"				
     },				
     {				
       "name": "test-long-password-in-password-field",				
-      "path": "tests/test-admin/test_TCP4_49.py"				
+      "path": "tests/test-login/test_TCP4_49.py"				
     },				
     {				
       "name": "test-long-email-in-forgotten-password-email-field",				
-      "path": "tests/test-admin/test_TCP4_52.py"				
+      "path": "tests/test-login/test_TCP4_52.py"				
     },				
     {				
       "name": "test-long-name-in-new-group-name-field",				
