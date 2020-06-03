@@ -1,6 +1,6 @@
 [
   {
-    "name": "test-edit-user-cell",
+    "name": "test cell",
     "path": "tests/test-admin/test-users/test_TCP4_613.py"
   }
 ]
