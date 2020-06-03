@@ -73,4 +73,3 @@ class TestNewUserCreated(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestNewUserCreated, data, __main__)
-    print(output)

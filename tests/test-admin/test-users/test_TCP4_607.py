@@ -32,11 +32,8 @@ class TestUserFirstNameEdited(BaseTest):
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
 
-        # Wait for Requests page to load until inner sidebar is displayed
-        self.wait.until(EC.visibility_of_element_located((By.ID, 'sidebar-inner')))
-
-        # Click Admin link, wait for Users table to load 
-        self.driver.find_element_by_link_text("Admin").click()
+        # Redirect to Admin Users page, wait for +User button to be clickable 
+        self.driver.get(data['server_url'] + '/admin/users')
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'vuetable-body')))
         
         # Find table record with ID = '2', find edit button in this element, and click
@@ -50,8 +47,8 @@ class TestUserFirstNameEdited(BaseTest):
         self.driver.find_element_by_id('firstname').send_keys(first_name)
         self.driver.find_element_by_id('saveUser').click()
 
-        # Click on Users link and wait for Users table to load and verify that new name exists for table record 2
-        self.driver.find_element_by_link_text('Users').click()
+        # Navigate to Users page and wait for Users table to load and verify that new name exists for table record 2
+        self.driver.get(data['server_url'] + '/admin/users')
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'vuetable-body')))
         user_tr = self.driver.find_element_by_xpath("//tr//td[1][contains(text(), '2')]").find_element_by_xpath("..")
         self.assertTrue(user_tr.find_element_by_xpath(".//td[contains(text(), " + first_name + ")]"))
