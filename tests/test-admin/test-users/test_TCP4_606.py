@@ -62,7 +62,7 @@ class TestNewUserCreated(BaseTest):
         Select(self.driver.find_element_by_name("size")).select_by_visible_text("Active")
 
         # Save and wait for alert to be visible
-        self.driver.find_element_by_xpath("//footer[@id='addUserModal___BV_modal_footer_']/button[2]").click()
+        self.driver.find_element_by_id('saveUser').click()
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'alert')))
 
         # Save alert, remove leading special characters, and verify text
