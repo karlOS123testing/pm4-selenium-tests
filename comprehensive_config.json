@@ -104,6 +104,10 @@
       "path": "tests/test-admin/test-users/test_TCP4_606.py"
     },
     {
+      "name": "test-edit-user-first-name",
+      "path": "tests/test-admin/test-users/test_TCP4_607.py"
+    },
+    {
       "name": "test-long-state-in-edit-user-form",
       "path": "tests/test-admin/test-users/test_TCP4_732.py"
     },
