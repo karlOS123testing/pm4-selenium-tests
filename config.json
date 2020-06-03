@@ -10,9 +10,5 @@
   {
     "name": "test-edit-user-cell",
     "path": "tests/test-admin/test-users/test_TCP4_613.py"
-  },
-  {
-    "name": "test-edit-user-country",
-    "path": "tests/test-admin/test-users/test_TCP4_614.py"
   }
 ]
