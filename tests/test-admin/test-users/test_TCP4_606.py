@@ -32,11 +32,8 @@ class TestNewUserCreated(BaseTest):
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
 
-        # Wait for Requests page to load until inner sidebar is displayed
-        self.wait.until(EC.visibility_of_element_located((By.ID, 'sidebar-inner')))
-
-        # Click Admin link, wait for +User button to be clickable 
-        self.driver.find_element_by_link_text("Admin").click()
+        # Redirect to Admin Users page, wait for +User button to be clickable 
+        self.driver.get(data['server_url'] + '/admin/users')
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[@class='btn btn-secondary']")))
 
         # Click +User button and wait for form to load
@@ -76,3 +73,4 @@ class TestNewUserCreated(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestNewUserCreated, data, __main__)
+    print(output)
