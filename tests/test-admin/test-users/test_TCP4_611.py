@@ -43,9 +43,7 @@ class TestUserPhoneEdited(BaseTest):
         # Wait for user edit form to load, change phone, and save
         self.wait.until(EC.visibility_of_element_located((By.ID, 'phone')))
         self.driver.find_element_by_id('phone').clear()
-        phone = ''.join(random.choice(string.ascii_letters) for n in range(10)) + '@' +\
-            ''.join(random.choice(string.ascii_letters) for n in range(10)) + '.' +\
-                ''.join(random.choice(string.ascii_letters) for n in range(5))
+        phone = ''.join(random.choice(string.digits) for n in range(10))
         self.driver.find_element_by_id('phone').send_keys(phone)
         self.driver.find_element_by_id('saveUser').click()
 
