@@ -43,9 +43,7 @@ class TestUserCellEdited(BaseTest):
         # Wait for user edit form to load, change cell, and save
         self.wait.until(EC.visibility_of_element_located((By.ID, 'cell')))
         self.driver.find_element_by_id('cell').clear()
-        cell = ''.join(random.choice(string.ascii_letters) for n in range(10)) + '@' +\
-            ''.join(random.choice(string.ascii_letters) for n in range(10)) + '.' +\
-                ''.join(random.choice(string.ascii_letters) for n in range(5))
+        cell = ''.join(random.choice(string.digits) for n in range(10))
         self.driver.find_element_by_id('cell').send_keys(cell)
         self.driver.find_element_by_id('saveUser').click()
 
