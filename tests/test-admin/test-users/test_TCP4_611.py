@@ -45,7 +45,8 @@ class TestUserPhoneEdited(BaseTest):
         self.driver.find_element_by_id('phone').clear()
         phone = ''.join(random.choice(string.digits) for n in range(10))
         self.driver.find_element_by_id('phone').send_keys(phone)
-        self.driver.find_element_by_id('saveUser').click()
+        self.driver.find_element_by_xpath("//div[@id='nav-home']/div[2]/button[2]").click()
+        self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'alert')))
 
         # Navigate to Users page and wait for Users table to load and reclick table record edit button
         self.driver.get(data['server_url'] + '/admin/users')
