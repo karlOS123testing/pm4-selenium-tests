@@ -47,7 +47,7 @@ class TestUserFaxEdited(BaseTest):
         self.driver.find_element_by_id('fax').send_keys(fax)
         self.driver.find_element_by_id('saveUser').click()
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'alert')))
-        self.wait.until(EC.invisibility_of_element_located((By.CLASS_NAME, 'alert')))
+        # self.wait.until(EC.invisibility_of_element_located((By.CLASS_NAME, 'alert')))
 
         # Navigate to Users page and wait for Users table to load and reclick table record edit button
         self.driver.get(data['server_url'] + '/admin/users')
@@ -64,4 +64,3 @@ class TestUserFaxEdited(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestUserFaxEdited, data, __main__)
-    print(output)
