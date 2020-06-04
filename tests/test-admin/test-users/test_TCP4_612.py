@@ -45,7 +45,7 @@ class TestUserFaxEdited(BaseTest):
         self.driver.find_element_by_id('fax').clear()
         fax = ''.join(random.choice(string.digits) for n in range(10))
         self.driver.find_element_by_id('fax').send_keys(fax)
-        self.driver.find_element_by_id('saveUser').click()
+        self.driver.find_element_by_xpath("//div[@id='nav-home']/div[2]/button[2]").click()
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'alert')))
         # self.wait.until(EC.invisibility_of_element_located((By.CLASS_NAME, 'alert')))
 
