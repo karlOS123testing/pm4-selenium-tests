@@ -1,14 +1,42 @@
 [
   {
-    "name": "test-edit-user-phone",
-    "path": "tests/test-admin/test-users/test_TCP4_611.py"
+    "name": "test-long-username-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_23.py"
   },
   {
-    "name": "test-edit-user-fax",
-    "path": "tests/test-admin/test-users/test_TCP4_612.py"
+    "name": "test-long-last-name-in-new-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_3.py"
   },
   {
-    "name": "test-edit-user-cell",
-    "path": "tests/test-admin/test-users/test_TCP4_613.py"
+    "name": "test-long-email-in-new-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_4.py"
+  },
+  {
+    "name": "test-long-password-in-new-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_5.py"
+  },
+  {
+    "name": "test-long-confirm-password-in-new-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_6.py"
+  },
+  {
+    "name": "test-long-first-name-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_24.py"
+  },
+  {
+    "name": "test-long-last-name-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_25.py"
+  },
+  {
+    "name": "test-long-email-string-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_26.py"
+  },
+  {
+    "name": "test-long-password-string-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_27.py"
+  },
+  {
+    "name": "test-long-confirm-password-in-edit-user-form",
+    "path": "tests/test-admin/test-users/test_TCP4_28.py"
   }
 ]
