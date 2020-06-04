@@ -46,7 +46,8 @@ class TestUserFaxEdited(BaseTest):
         fax = ''.join(random.choice(string.digits) for n in range(10))
         self.driver.find_element_by_id('fax').send_keys(fax)
         self.driver.find_element_by_id('saveUser').click()
-
+        self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'alert')))
+        
         # Navigate to Users page and wait for Users table to load and reclick table record edit button
         self.driver.get(data['server_url'] + '/admin/users')
         self.wait.until(EC.visibility_of_element_located((By.CLASS_NAME, 'vuetable-body')))
