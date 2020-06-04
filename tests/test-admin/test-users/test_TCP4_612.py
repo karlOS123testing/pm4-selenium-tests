@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-""" Class to edit a user's phone.
+""" Class to edit a user's fax.
 """
 
 # Check if using local environment
@@ -23,11 +23,11 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-class TestUserPhoneEdited(BaseTest):
-    ''' Navigate to the Users page and edit a user's phone. '''
+class TestUserFaxEdited(BaseTest):
+    ''' Navigate to the Users page and edit a user's fax. '''
 
-    def test_that_user_phone_is_edited(self):
-        ''' Verify that a user's phone is successfully edited.'''
+    def test_that_user_fax_is_edited(self):
+        ''' Verify that a user's fax is successfully edited.'''
         
         # Login using configured url, workspace, username, and password
         self.driver = login(data['server_url'], data['username'], data['password'], self.driver)
@@ -40,11 +40,11 @@ class TestUserPhoneEdited(BaseTest):
         user_tr = self.driver.find_element_by_xpath("//tr//td[1][contains(text(), '2')]").find_element_by_xpath("..")
         user_tr.find_element_by_class_name('fa-pen-square').click()
         
-        # Wait for user edit form to load, change phone, and save
-        self.wait.until(EC.visibility_of_element_located((By.ID, 'phone')))
-        self.driver.find_element_by_id('phone').clear()
-        phone = ''.join(random.choice(string.digits) for n in range(10))
-        self.driver.find_element_by_id('phone').send_keys(phone)
+        # Wait for user edit form to load, change fax, and save
+        self.wait.until(EC.visibility_of_element_located((By.ID, 'fax')))
+        self.driver.find_element_by_id('fax').clear()
+        fax = ''.join(random.choice(string.digits) for n in range(10))
+        self.driver.find_element_by_id('fax').send_keys(fax)
         self.driver.find_element_by_id('saveUser').click()
 
         # Navigate to Users page and wait for Users table to load and reclick table record edit button
@@ -53,12 +53,12 @@ class TestUserPhoneEdited(BaseTest):
         user_tr = self.driver.find_element_by_xpath("//tr//td[1][contains(text(), '2')]").find_element_by_xpath("..")
         user_tr.find_element_by_class_name('fa-pen-square').click()
 
-        # Wait for edit user form to load and verify phone field contains correct phone
-        self.wait.until(EC.visibility_of_element_located((By.ID, 'phone')))
-        phone_field = self.driver.find_element_by_id('phone')
-        self.assertEqual(phone_field.get_property('value'), phone)
+        # Wait for edit user form to load and verify fax field contains correct fax
+        self.wait.until(EC.visibility_of_element_located((By.ID, 'fax')))
+        fax_field = self.driver.find_element_by_id('fax')
+        self.assertEqual(fax_field.get_property('value'), fax)
 
 
 if __name__ == "__main__":
     import __main__
-    output = run_test(TestUserPhoneEdited, data, __main__)
+    output = run_test(TestUserFaxEdited, data, __main__)
