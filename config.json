@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-edit-user-password",
-    "path": "tests/test-admin/test-users/test_TCP4_620.py"
+    "name": "test-edit-user-all-permissions",
+    "path": "tests/test-admin/test-users/test_TCP4_629.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
