@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-admin-to-script-executors-full-screen",
-    "path": "tests/test-navigation/test_TCP4_756.py"
+    "name": "test-navigation-requests-to-view-admin-profile-full-screen",
+    "path": "tests/test-navigation/test_TCP4_757.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
