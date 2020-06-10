@@ -56,4 +56,3 @@ class TestTabletViewAdminPageLoads(TabletViewBaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestTabletViewAdminPageLoads, data, __main__)
-    print(output)
