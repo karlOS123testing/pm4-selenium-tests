@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-edit-user-cell",
-    "path": "tests/test-admin/test-users/test_TCP4_613.py"
+    "name": "test-edit-user-address",
+    "path": "tests/test-admin/test-users/test_TCP4_615.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
