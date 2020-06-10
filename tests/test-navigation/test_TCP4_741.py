@@ -6,7 +6,7 @@
 from os import getenv
 
 if getenv('ENVIRONMENT') != 'local':
-    from test_parent import TabletViewTest
+    from test_parent import TabletViewBaseTest
     from util import run_test, login
 # If using local environment
 else:
@@ -55,3 +55,4 @@ class TestTabletViewTasksPageLoads(TabletViewBaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestTabletViewTasksPageLoads, data, __main__)
+    print(output)
