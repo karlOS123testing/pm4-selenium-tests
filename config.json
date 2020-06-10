@@ -2,21 +2,5 @@
   {
     "name": "test-edit-user-address",
     "path": "tests/test-admin/test-users/test_TCP4_615.py"
-  },
-  {
-    "name": "test-edit-user-city",
-    "path": "tests/test-admin/test-users/test_TCP4_616.py"
-  },
-  {
-    "name": "test-edit-user-state-region",
-    "path": "tests/test-admin/test-users/test_TCP4_617.py"
-  },
-  {
-    "name": "test-edit-user-postal-code",
-    "path": "tests/test-admin/test-users/test_TCP4_618.py"
-  },
-  {
-    "name": "test-edit-user-password",
-    "path": "tests/test-admin/test-users/test_TCP4_620.py"
   }
 ]
