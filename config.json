@@ -1,5 +1,13 @@
 [
   {
+    "name": "test-edit-user-phone",
+    "path": "tests/test-admin/test-users/test_TCP4_611.py"
+  },
+  {
+    "name": "test-edit-user-fax",
+    "path": "tests/test-admin/test-users/test_TCP4_612.py"
+  },
+  {
     "name": "test-edit-user-address",
     "path": "tests/test-admin/test-users/test_TCP4_615.py"
   }
