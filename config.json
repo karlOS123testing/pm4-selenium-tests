@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-designer-to-screens-full-screen",
-    "path": "tests/test-navigation/test_TCP4_750.py"
+    "name": "test-navigation-designer-to-environment-variables-full-screen",
+    "path": "tests/test-navigation/test_TCP4_751.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
