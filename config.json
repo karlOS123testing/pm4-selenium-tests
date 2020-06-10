@@ -4,11 +4,11 @@
     "path": "tests/test-admin/test-users/test_TCP4_611.py"
   },
   {
-    "name": "test-edit-user-fax",
-    "path": "tests/test-admin/test-users/test_TCP4_612.py"
+    "name": "test-long-name-in-edit-auth-form",
+    "path": "tests/test-admin/test-auth-clients/test_TCP4_736.py"
   },
   {
-    "name": "test-edit-user-address",
-    "path": "tests/test-admin/test-users/test_TCP4_615.py"
+    "name": "test-long-redirect-url-in-edit-auth-form",
+    "path": "tests/test-admin/test-auth-clients/test_TCP4_737.py"
   }
 ]
