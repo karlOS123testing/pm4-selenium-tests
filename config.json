@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-admin-to-customize-ui-full-screen",
-    "path": "tests/test-navigation/test_TCP4_754.py"
+    "name": "test-navigation-admin-to-queue-management-full-screen",
+    "path": "tests/test-navigation/test_TCP4_755.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
