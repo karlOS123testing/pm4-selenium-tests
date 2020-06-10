@@ -132,12 +132,32 @@
       "path": "tests/test-admin/test-users/test_TCP4_613.py"
     },
     {
-      "name": "test-edit-user-country",
-      "path": "tests/test-admin/test-users/test_TCP4_614.py"
+      "name": "test-edit-user-address",
+      "path": "tests/test-admin/test-users/test_TCP4_615.py"
+    },
+    {
+      "name": "test-edit-user-city",
+      "path": "tests/test-admin/test-users/test_TCP4_616.py"
+    },
+    {
+      "name": "test-edit-user-state-region",
+      "path": "tests/test-admin/test-users/test_TCP4_617.py"
+    },
+    {
+      "name": "test-edit-user-postal-code",
+      "path": "tests/test-admin/test-users/test_TCP4_618.py"
     },
     {
       "name": "test-edit-user-username",
       "path": "tests/test-admin/test-users/test_TCP4_619.py"
+    },
+    {
+      "name": "test-edit-user-password",
+      "path": "tests/test-admin/test-users/test_TCP4_620.py"
+    },
+    {
+      "name": "test-edit-user-all-permissions",
+      "path": "tests/test-admin/test-users/test_TCP4_629.py"
     },
     {
       "name": "test-long-state-in-edit-user-form",
@@ -162,6 +182,102 @@
     {
       "name": "test-long-redirect-url-in-edit-auth-form",
       "path": "tests/test-admin/test-auth-clients/test_TCP4_737.py"
+    },
+    {
+      "name": "test-navigation-requests-to-tasks-full-screen",
+      "path": "tests/test-navigation/test_TCP4_738.py"
+    },
+    {
+      "name": "test-navigation-requests-to-designer-full-screen",
+      "path": "tests/test-navigation/test_TCP4_739.py"
+    },
+    {
+      "name": "test-navigation-requests-to-admin-full-screen",
+      "path": "tests/test-navigation/test_TCP4_740.py"
+    },
+    {
+      "name": "test-navigation-requests-to-tasks-tablet-view",
+      "path": "tests/test-navigation/test_TCP4_741.py"
+    },
+    {
+      "name": "test-navigation-requests-to-designer-tablet-view",
+      "path": "tests/test-navigation/test_TCP4_742.py"
+    },
+    {
+      "name": "test-navigation-requests-to-admin-tablet-view",
+      "path": "tests/test-navigation/test_TCP4_743.py"
+    },
+    {
+      "name": "test-navigation-requests-to-requests-in-progress-full-screen",
+      "path": "tests/test-navigation/test_TCP4_744.py"
+    },
+    {
+      "name": "test-navigation-requests-to-requests-completed-full-screen",
+      "path": "tests/test-navigation/test_TCP4_745.py"
+    },
+    {
+      "name": "test-navigation-requests-to-requests-in-progress-full-screen",
+      "path": "tests/test-navigation/test_TCP4_744.py"
+    },
+    {
+      "name": "test-navigation-tasks-to-tasks-completed-full-screen",
+      "path": "tests/test-navigation/test_TCP4_747.py"
+    },
+    {
+      "name": "test-navigation-requests-to-all-requests-full-screen",
+      "path": "tests/test-navigation/test_TCP4_746.py"
+    },
+    {
+      "name": "test-navigation-tasks-to-self-service-full-screen",
+      "path": "tests/test-navigation/test_TCP4_748.py"
+    },
+    {
+      "name": "test-navigation-designer-to-scripts-full-screen",
+      "path": "tests/test-navigation/test_TCP4_749.py"
+    },
+    {
+      "name": "test-navigation-designer-to-screens-full-screen",
+      "path": "tests/test-navigation/test_TCP4_750.py"
+    },
+    {
+      "name": "test-navigation-designer-to-environment-variables-full-screen",
+      "path": "tests/test-navigation/test_TCP4_751.py"
+    },
+    {
+      "name": "test-navigation-admin-to-groups-full-screen",
+      "path": "tests/test-navigation/test_TCP4_752.py"
+    },
+    {
+      "name": "test-navigation-admin-to-auth-clients-full-screen",
+      "path": "tests/test-navigation/test_TCP4_753.py"
+    },
+    {
+      "name": "test-navigation-admin-to-customize-ui-full-screen",
+      "path": "tests/test-navigation/test_TCP4_754.py"
+    },
+    {
+      "name": "test-navigation-admin-to-queue-management-full-screen",
+      "path": "tests/test-navigation/test_TCP4_755.py"
+    },
+    {
+      "name": "test-navigation-admin-to-script-executors-full-screen",
+      "path": "tests/test-navigation/test_TCP4_756.py"
+    },
+    {
+      "name": "test-navigation-requests-to-view-admin-profile-full-screen",
+      "path": "tests/test-navigation/test_TCP4_757.py"
+    },
+    {
+      "name": "test-navigation-requests-to-edit-admin-profile-full-screen",
+      "path": "tests/test-navigation/test_TCP4_758.py"
+    },
+    {
+      "name": "test-navigation-requests-to-documentation-full-screen",
+      "path": "tests/test-navigation/test_TCP4_759.py"
+    },
+    {
+      "name": "test-navigation-requests-to-about-full-screen",
+      "path": "tests/test-navigation/test_TCP4_760.py"
     },
     {				
       "name": "test-that-fails",				
