@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-requests-to-designer-tablet-view",
-    "path": "tests/test-navigation/test_TCP4_742.py"
+    "name": "test-navigation-requests-to-admin-tablet-view",
+    "path": "tests/test-navigation/test_TCP4_743.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
