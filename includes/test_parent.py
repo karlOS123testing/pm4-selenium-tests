@@ -27,3 +27,23 @@ class BaseTest(unittest.TestCase):
         ''' End browser instance. '''
         cls.driver.close()
         cls.driver.quit()
+
+class TabletViewBaseTest(unittest.TestCase):
+    """ The Tablet View BaseTest class from which tests will inherit. """
+
+    @classmethod
+    def setUpClass(cls):
+        ''' Set up browser instance. '''
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--window-size=800,600")
+        cls.driver = webdriver.Chrome(options=chrome_options)
+
+        # Global driver wait variable
+        cls.wait = WebDriverWait(cls.driver, 30)
+
+    @classmethod
+    def tearDownClass(cls):
+        ''' End browser instance. '''
+        cls.driver.close()
+        cls.driver.quit()
