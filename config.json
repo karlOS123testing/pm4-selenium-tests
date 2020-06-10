@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-requests-to-requests-completed-full-screen",
-    "path": "tests/test-navigation/test_TCP4_745.py"
+    "name": "test-navigation-requests-to-all-requests-full-screen",
+    "path": "tests/test-navigation/test_TCP4_746.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
