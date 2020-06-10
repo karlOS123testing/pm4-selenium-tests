@@ -12,7 +12,7 @@ if getenv('ENVIRONMENT') != 'local':
 else:
     from sys import path
     path.append('../')
-    from includes.test_parent import TabletViewTest
+    from includes.test_parent import TabletViewBaseTest
     from includes.util import run_test, login
     from __init__ import data
 
