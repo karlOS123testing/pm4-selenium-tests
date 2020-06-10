@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-admin-to-groups-full-screen",
-    "path": "tests/test-navigation/test_TCP4_752.py"
+    "name": "test-navigation-admin-to-auth-clients-full-screen",
+    "path": "tests/test-navigation/test_TCP4_753.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
