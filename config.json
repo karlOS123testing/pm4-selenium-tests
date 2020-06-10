@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-edit-user-state-region",
-    "path": "tests/test-admin/test-users/test_TCP4_617.py"
+    "name": "test-edit-user-postal-code",
+    "path": "tests/test-admin/test-users/test_TCP4_618.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
