@@ -1,7 +1,7 @@
 [
   {
-    "name": "test-navigation-tasks-to-tasks-completed-full-screen",
-    "path": "tests/test-navigation/test_TCP4_747.py"
+    "name": "test-navigation-tasks-to-self-service-full-screen",
+    "path": "tests/test-navigation/test_TCP4_748.py"
   },
   {
     "name": "test-long-name-in-edit-auth-form",
