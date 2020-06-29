@@ -1,14 +1,6 @@
 [
   {
-    "name": "test-navigation-requests-to-requests-in-progress-full-screen",
-    "path": "tests/test-navigation/test_TCP4_744.py"
-  },
-  {
-    "name": "test-long-name-in-edit-auth-form",
-    "path": "tests/test-admin/test-auth-clients/test_TCP4_736.py"
-  },
-  {
-    "name": "test-long-redirect-url-in-edit-auth-form",
-    "path": "tests/test-admin/test-auth-clients/test_TCP4_737.py"
+    "name": "test-environment-variable",
+    "path": "tests/test-env/test_env.py"
   }
 ]
