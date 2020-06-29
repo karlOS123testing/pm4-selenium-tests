@@ -1,0 +1,206 @@
+[	
+    {
+      "name": "test-long-username-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_23.py"
+    },
+    {
+      "name": "test-long-last-name-in-new-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_3.py"
+    },
+    {
+      "name": "test-long-email-in-new-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_4.py"
+    },
+    {
+      "name": "test-long-password-in-new-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_5.py"
+    },
+    {
+      "name": "test-long-confirm-password-in-new-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_6.py"
+    },
+    {
+      "name": "test-long-first-name-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_24.py"
+    },
+    {
+      "name": "test-long-last-name-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_25.py"
+    },
+    {
+      "name": "test-long-email-string-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_26.py"
+    },
+    {
+      "name": "test-long-password-string-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_27.py"
+    },
+    {
+      "name": "test-long-confirm-password-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_28.py"
+    },
+    {
+      "name": "test-long-phone-string-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_29.py"
+    },
+    {
+      "name": "test-long-address-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_30.py"
+    },
+    {
+      "name": "test-long-postal-code-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_31.py"
+    },
+    {
+      "name": "test-long-city-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_32.py"
+    },
+    {				
+      "name": "test-long-user-name-in-search-bar",				
+      "path": "tests/test-admin/test-users/test_TCP4_33.py"				
+    },				
+    {				
+      "name": "test-long-user-name-in-login-username-field",				
+      "path": "tests/test-login/test_TCP4_48.py"				
+    },				
+    {				
+      "name": "test-long-password-in-password-field",				
+      "path": "tests/test-login/test_TCP4_49.py"				
+    },				
+    {				
+      "name": "test-long-email-in-forgotten-password-email-field",				
+      "path": "tests/test-login/test_TCP4_52.py"				
+    },				
+    {				
+      "name": "test-long-name-in-new-group-name-field",				
+      "path": "tests/test-admin/test-groups/test_TCP4_59.py"				
+    },				
+    {				
+      "name": "test-long-description-in-new-group-description-field",				
+      "path": "tests/test-admin/test-groups/test_TCP4_60.py"				
+    },				
+    {				
+      "name": "test-long-search-text-in-groups-search-bar",				
+      "path": "tests/test-admin/test-groups/test_TCP4_69.py"				
+    },		
+    {		
+      "name": "test-long-group-name-in-edit-group-name-field",		
+      "path": "tests/test-admin/test-groups/test_TCP4_70.py"		
+    },		
+    {		
+      "name": "test-long-group-description-in-edit-group-description-field",		
+      "path": "tests/test-admin/test-groups/test_TCP4_71.py"		
+    },		
+    {
+      "name": "test-long-name-in-new-auth-client-name-input-field",
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_94.py"
+    },
+    {
+      "name": "test-long-redirect-url-in-new-auth-client-redirect-url-input-field",
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_95.py"
+    },
+    {
+      "name": "test-new-user-created-successfully",
+      "path": "tests/test-admin/test-users/test_TCP4_606.py"
+    },
+    {
+      "name": "test-edit-user-first-name",
+      "path": "tests/test-admin/test-users/test_TCP4_607.py"
+    },
+    {
+      "name": "test-edit-user-last-name",
+      "path": "tests/test-admin/test-users/test_TCP4_608.py"
+    },
+    {
+      "name": "test-edit-user-job-title",
+      "path": "tests/test-admin/test-users/test_TCP4_609.py"
+    },
+    {
+      "name": "test-edit-user-email",
+      "path": "tests/test-admin/test-users/test_TCP4_610.py"
+    },
+    {
+      "name": "test-edit-user-phone",
+      "path": "tests/test-admin/test-users/test_TCP4_611.py"
+    },
+    {
+      "name": "test-edit-user-username",
+      "path": "tests/test-admin/test-users/test_TCP4_619.py"
+    },
+    {
+      "name": "test-long-state-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_732.py"
+    },
+    {
+      "name": "test-long-job-title-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_733.py"
+    },
+    {
+      "name": "test-long-fax-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_734.py"
+    },
+    {
+      "name": "test-long-cell-in-edit-user-form",
+      "path": "tests/test-admin/test-users/test_TCP4_735.py"
+    },
+    {
+      "name": "test-long-name-in-edit-auth-form",
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_736.py"
+    },
+    {
+      "name": "test-long-redirect-url-in-edit-auth-form",
+      "path": "tests/test-admin/test-auth-clients/test_TCP4_737.py"
+    },
+    {				
+      "name": "test-that-fails",				
+      "path": "tests/test-failing-conditions/test_that_fails.py"				
+    },				
+    {				
+      "name": "test-that-doesnt-run",				
+      "path": "tests/test-failing-conditions/test_that_doesnt_run.py"				
+    },
+    {
+        "name": "tests the users search bar with 60 characters",
+        "path": "tests/test_TCP4_1.py"
+    },  
+    {
+        "name": "Inserts 60 charcaters on the username at trhe login",
+        "path": "tests/test_TCP4_2.py"
+    },
+    {
+      "name": "change the country of an user",
+      "path": "tests/test_TCP4_614.py"
+    },
+    {
+        "name": "change users datetime",
+        "path": "tests/test_TCP4_622.py"
+    },  
+    {
+        "name": "change users timezone",
+        "path": "tests/test_TCP4_623.py"
+    },
+    {
+      "name": "change the staus of an user",
+      "path": "tests/test_TCP4_624.py"
+    },
+    {
+      "name": "change the staus of an user",
+      "path": "tests/test_TCP4_625.py"
+    },
+    {
+      "name": "change process designer group user staus",
+      "path": "tests/test_TCP4_626.py"
+    },
+    {
+      "name": "change requester group user staus",
+      "path": "tests/test_TCP4_627.py"
+    },
+    {
+      "name": "change administrator group user staus",
+      "path": "tests/test_TCP4_628.py"
+    },
+    {
+      "name": "change administrator group user staus",
+      "path": "tests/test_TCP4_692.py"
+    }
+  ]

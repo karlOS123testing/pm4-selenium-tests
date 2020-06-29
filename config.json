@@ -1,0 +1,6 @@
+[	
+  {
+    "name": "change process administrator group user staus",
+    "path": "tests/test_TCP4_692.py"
+  }
+]
