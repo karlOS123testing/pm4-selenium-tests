@@ -2,5 +2,9 @@
   {
     "name": "test-environment-variable",
     "path": "tests/test-env/test_env.py"
+  },
+  {
+    "name": "test-pyautogui-import",
+    "path": "tests/test-pyautogui/test_pyautogui_import.py"
   }
 ]
