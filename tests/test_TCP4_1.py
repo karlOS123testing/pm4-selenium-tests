@@ -3,18 +3,18 @@
 # Check if using local environment
 from os import getenv
 
-#if getenv('ENVIRONMENT') != 'local':
- #   from test_parent import BaseTest
-  #  from util import run_test
-   # from includes.file_login import file_login
+if getenv('ENVIRONMENT') != 'local':
+    from test_parent import BaseTest
+    from util import run_test
+    from includes.file_login import file_login
     
 # If using local environment
-#else:
-from sys import path
-path.append('../')
-from includes.test_parent import BaseTest
-from includes.util import run_test
-from includes.page_login import PageLogin
+else:
+    from sys import path
+    path.append('../')
+    from includes.test_parent import BaseTest
+    from includes.util import run_test
+    from includes.page_login import PageLogin
 
 from __init__ import data
 from includes.page_users import PageUsers
