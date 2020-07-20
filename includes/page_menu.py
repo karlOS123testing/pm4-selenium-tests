@@ -16,7 +16,7 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-class file_menu(BaseTest):
+class PageMenu(BaseTest):
 
     def goto_admin(self, driver, data):
         # Go to the admin tab
