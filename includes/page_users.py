@@ -15,7 +15,7 @@ class PageUsers:
     
     def paths_users(self):
         self.user_search_bar = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//input[@placeholder='Search']"))) 
-        self.non_admin_edit = self.driver.find_element_by_xpath("(//button[@title='Edit'])[2]")  
+        self.non_admin_edit = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//button[@title='Edit'])[2]"))) 
 
     def search_long_string(self):
         self.paths_users()
