@@ -6,7 +6,10 @@ from os import getenv
 if getenv('ENVIRONMENT') != 'local':
     from test_parent import BaseTest
     from util import run_test
-    from includes.file_login import file_login
+    from page_login import PageLogin
+    from page_users import PageUsers
+    from page_menu import PageMenu
+
     
 # If using local environment
 else:
@@ -15,10 +18,10 @@ else:
     from includes.test_parent import BaseTest
     from includes.util import run_test
     from includes.page_login import PageLogin
+    from __init__ import data
+    from includes.page_users import PageUsers
+    from includes.page_menu import PageMenu
 
-from __init__ import data
-from includes.page_users import PageUsers
-from includes.page_menu import PageMenu
 
 class TCP4_1(BaseTest):
     ''' a string of 60 scharacters can be used in the user search input '''
@@ -27,10 +30,10 @@ class TCP4_1(BaseTest):
         '''Go to the users page and input a 60 characters string in the searchbar'''
 
         # Login using configured url, workspace, username, and password
-        self.driver = PageLogin.login(data['server_url'], data['username'], data['password'], self.driver)
+        self.driver = PageLogin(self.driver, data).login()
 
         # Go to the admin tab
-        PageMenu.goto_admin(self, self.driver, data)
+        PageMenu(self.driver, data).goto_admin()
 
         # Insert the 60 characters string on the searchbar
         self.assertTrue(PageUsers(self.driver, data).search_long_string())

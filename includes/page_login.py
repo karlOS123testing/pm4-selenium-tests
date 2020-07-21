@@ -1,33 +1,36 @@
+#!/usr/local/bin/python3
 # functions for the POM POC
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
-class PageLogin:
-    #Paths
-    def __init__(self, driver, data):
-        self.driver=driver
-        self.data=data
 
-    def paths_login(self, driver, data):
-        self.username_field = self.driver.find_element_by_id('username')   
-        self.password_field = self.driver.find_element_by_id('password')   
-       
-    @staticmethod     
-    def login(url, username, password, driver):
+class PageLogin:
+    ''' Page object model for Login Page. '''
+
+    def __init__(self, driver, data):
+        self.driver = driver
+        self.data = data
+        self.wait = WebDriverWait(driver, 30)
+
+    def paths_login(self):
+        self.username_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'username')))
+        self.password_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'password')))
+        self.login_button = self.wait.until(EC.visibility_of_element_located((By.NAME, 'login')))
+
+    def get_page(self):
+        ''' Function to navigate to Login page. '''
+        self.driver.get(self.data['server_url'])
+
+    def login(self):
         ''' Function to log user in to workspace.
         '''
-        # Navigate to server
-        driver.get(url)
+        # Navigate to Login Page
+        self.get_page()
 
-        # Wait for login page to load
-        wait = WebDriverWait(driver, 30)
-        wait.until(EC.element_to_be_clickable((By.NAME, 'login')))
+        self.username_field.send_keys(self.data['username'])
+        self.password_field('password').send_keys(self.data['password'])
+        self.login_button.click()
 
-        # Login
-        driver.find_element_by_id('username').send_keys(username)
-        driver.find_element_by_id('password').send_keys(password)
-        driver.find_element_by_name('login').click()
-
-        return driver
+        return self.driver
