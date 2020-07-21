@@ -33,7 +33,7 @@ class TCP4_1(BaseTest):
         self.driver = PageLogin(self.driver, data).login()
 
         # Go to the admin tab
-        PageMenu.goto_admin(self, self.driver, data)
+        PageMenu(self.driver, data).goto_admin()
 
         # Insert the 60 characters string on the searchbar
         self.assertTrue(PageUsers(self.driver, data).search_long_string())
