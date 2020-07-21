@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 # functions for the POM POC
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
