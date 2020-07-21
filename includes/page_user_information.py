@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class PageUserInformation:
-    ''' Page object model for Login Page. '''
+    ''' Page object model for user information page'''
 
     def __init__(self, driver, data):
         self.driver = driver
@@ -16,10 +16,6 @@ class PageUserInformation:
 
     def paths_user_information(self):
         self.user_permissions_tab = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//a[@href='#nav-profile']")))   
-
-    def get_page(self):
-        ''' Function to navigate to Login page. '''
-        self.driver.get(self.data['server_url'])
 
     def goto_user_permissions(self):
         self.paths_user_information()
