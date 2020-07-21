@@ -18,13 +18,16 @@ class PageLogin:
         self.password_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'password')))
         self.login_button = self.wait.until(EC.visibility_of_element_located((By.NAME, 'login')))
 
+    def get_page(self):
+        ''' Function to navigate to Login page. '''
+        self.driver.get(self.data['server_url'])
+
     def login(self):
         ''' Function to log user in to workspace.
         '''
-        # Navigate to server
-        self.driver.get(self.data['server_url'])
+        # Navigate to Login Page
+        self.get_page()
 
-        # Login
         self.username_field.send_keys(self.data['username'])
         self.password_field('password').send_keys(self.data['password'])
         self.login_button.click()
