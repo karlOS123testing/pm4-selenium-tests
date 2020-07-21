@@ -6,7 +6,9 @@ from os import getenv
 if getenv('ENVIRONMENT') != 'local':
     from test_parent import BaseTest
     from util import run_test
-    from includes.file_login import file_login
+    from file_login import file_login
+    from util import run_test
+    from page_login import PageLogin
     
 # If using local environment
 else:
@@ -15,10 +17,10 @@ else:
     from includes.test_parent import BaseTest
     from includes.util import run_test
     from includes.page_login import PageLogin
+    from __init__ import data
+    from includes.page_users import PageUsers
+    from includes.page_menu import PageMenu
 
-from __init__ import data
-from includes.page_users import PageUsers
-from includes.page_menu import PageMenu
 
 class TCP4_1(BaseTest):
     ''' a string of 60 scharacters can be used in the user search input '''
