@@ -14,23 +14,13 @@ class PageUserInformation:
         self.data = data
         self.wait = WebDriverWait(driver, 30)
 
-    def paths_login(self):
-        self.username_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'username')))
-        self.password_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'password')))
-        self.login_button = self.wait.until(EC.visibility_of_element_located((By.NAME, 'login')))
+    def paths_user_information(self):
+        self.user_permissions_tab = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//a[@href='#nav-profile']")))   
 
     def get_page(self):
         ''' Function to navigate to Login page. '''
         self.driver.get(self.data['server_url'])
 
-    def login(self):
-        ''' Function to log user in to workspace.
-        '''
-        # Navigate to Login Page
-        self.get_page()
-
-        self.username_field.send_keys(self.data['username'])
-        self.password_field('password').send_keys(self.data['password'])
-        self.login_button.click()
-
-        return self.driver
+    def goto_user_permissions(self):
+        self.paths_user_information()
+        self.user_permissions_tab.click()
