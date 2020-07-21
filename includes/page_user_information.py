@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
 
-class PageLogin:
+class PageUserInformation:
     ''' Page object model for Login Page. '''
 
     def __init__(self, driver, data):
@@ -28,10 +28,9 @@ class PageLogin:
         '''
         # Navigate to Login Page
         self.get_page()
-        self.paths_login()
 
         self.username_field.send_keys(self.data['username'])
-        self.password_field.send_keys(self.data['password'])
+        self.password_field('password').send_keys(self.data['password'])
         self.login_button.click()
 
         return self.driver
