@@ -27,7 +27,7 @@ class TCP4_1(BaseTest):
         '''Go to the users page and input a 60 characters string in the searchbar'''
 
         # Login using configured url, workspace, username, and password
-        self.driver = PageLogin.login(data['server_url'], data['username'], data['password'], self.driver)
+        self.driver = PageLogin(self.driver, data).login()
 
         # Go to the admin tab
         PageMenu.goto_admin(self, self.driver, data)
