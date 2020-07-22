@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-# functions for the POM POC
+""" Login Page class. """
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
@@ -10,11 +10,13 @@ class PageLogin:
     ''' Page object model for Login Page. '''
 
     def __init__(self, driver, data):
+        ''' Instantiate PageLogin class. '''
         self.driver = driver
         self.data = data
         self.wait = WebDriverWait(driver, 30)
 
     def paths_login(self):
+        ''' Function to get page elements. '''
         self.username_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'username')))
         self.password_field = self.wait.until(EC.visibility_of_element_located((By.ID, 'password')))
         self.login_button = self.wait.until(EC.visibility_of_element_located((By.NAME, 'login')))
@@ -26,10 +28,11 @@ class PageLogin:
     def login(self):
         ''' Function to log user in to workspace.
         '''
-        # Navigate to Login Page
+        # Navigate to Login Page and get Page elements
         self.get_page()
         self.paths_login()
 
+        # Log in using user provided credentials
         self.username_field.send_keys(self.data['username'])
         self.password_field.send_keys(self.data['password'])
         self.login_button.click()
