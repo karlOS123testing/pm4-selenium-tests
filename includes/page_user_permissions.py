@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-# functions for the POM POC
+""" User Permissions Page class. """
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
@@ -11,15 +11,17 @@ class PageUserPermissions:
     ''' Page object model for user permissions page'''
 
     def __init__(self, driver, data):
+        ''' Instantiate PageUserInformation object. '''
         self.driver = driver
         self.data = data
         self.wait = WebDriverWait(driver, 30)
 
     def paths_user_permissions(self):
+        ''' Function to get page elements. '''
         self.user_information_tab = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//a[@href='#nav-home']")))              
         self.auth_accordeon = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//button[@data-target= '#auth-clients']")))     
 
-        #Looks for the translated strings on permissions
+        # Looks for the translated strings on permissions
         try:
             self.english_auth_create_client = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//label[contains(text(), 'Create Auth Clients')]")))
             self.english_auth_delete_client = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//label[contains(text(), 'Delete Auth Clients')]")))
