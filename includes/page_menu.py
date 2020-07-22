@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-# functions for the POM POC
+""" Page Navigation class. """
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
