@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class PageCollections:
     ''' Page object model for Collections Page. '''
 
@@ -16,7 +17,7 @@ class PageCollections:
 
     def paths_collections(self):
         ''' Function to get page elements. '''
-        self.new_collection = self.wait.until(EC.visibility_of_element_located((By.ID , 'addUserCollection')))
+        self.new_collection = self.wait.until(EC.visibility_of_element_located((By.ID, 'addUserCollection')))
 
     def get_page(self):
         ''' Function to navigate to Collections page. '''
