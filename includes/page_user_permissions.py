@@ -32,15 +32,18 @@ class PageUserPermissions:
         except TimeoutException:
             self.bool_english_permissions_items = False
 
-    def goto_user_permissions(self):
+    def goto_user_information(self):
+        ''' Click on the user information tab'''
         self.paths_user_permissions()
         self.user_information_tab.click()
 
     def open_auth_accordeon(self):
+        ''' Open the auth permissions accordeon'''
         self.paths_user_permissions()
         self.auth_accordeon.click()
 
     def check_permissions_english_translation(self):
+        ''' Check that the permissions strings are on english'''
         self.paths_user_permissions()
 
         if self.bool_english_permissions_items:

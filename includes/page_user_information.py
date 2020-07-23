@@ -26,19 +26,21 @@ class PageUserInformation:
         # self.user_language_french = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//option[@value='fr']")))
 
     def goto_user_permissions(self):
+        ''' Click on the user permissions tab'''
         self.paths_user_information()
         self.user_permissions_tab.click()
 
     def change_user_language(self, selected_language):
+        ''' Changes the language for the user to the specified one'''
         self.paths_user_information()
         self.user_language.click()
         self.switch_language(selected_language)
 
     def switch_language(self, selected_language):
+        ''' Switch to click on the language selected'''
         switcher = {
             # "deutch": self.user_language_deutch.click(),
             "english": self.user_language_english.click(),
             # "spanish": self.user_language_spanish.click(),
             # "french": self.user_language_french.click()
         }
-        
