@@ -41,3 +41,4 @@ class PageUserInformation:
             # "spanish": self.user_language_spanish.click(),
             # "french": self.user_language_french.click()
         }
+        
