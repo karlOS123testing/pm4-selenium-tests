@@ -18,8 +18,8 @@ class PageUserPermissions:
 
     def paths_user_permissions(self):
         ''' Function to get page elements. '''
-        self.user_information_tab = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//a[@href='#nav-home']")))              
-        self.auth_accordeon = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//button[@data-target= '#auth-clients']")))     
+        self.user_information_tab = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//a[@href='#nav-home']")))
+        self.auth_accordeon = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//button[@data-target= '#auth-clients']")))
 
         # Looks for the translated strings on permissions
         try:

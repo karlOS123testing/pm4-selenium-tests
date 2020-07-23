@@ -33,6 +33,7 @@ def run_test(classname, data, modulename):
             unittest.TextTestRunner(stream=buffer).run(suite)
             return {"result": parse_results(buffer.getvalue()), "message": buffer.getvalue()}
 
+
 def parse_results(buffer):
     ''' Function to parse the unittest results into PM4-friendly format.
     '''

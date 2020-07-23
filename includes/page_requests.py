@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class PageRequests:
     ''' Page object model for Auth Clients Page. '''
 
@@ -16,7 +17,7 @@ class PageRequests:
 
     def paths_requests(self):
         ''' Function to get page elements. '''
-        self.navigation_bar = self.wait.until(EC.visibility_of_element_located((By.ID , 'nav_collapse')))
+        self.navigation_bar = self.wait.until(EC.visibility_of_element_located((By.ID, 'nav_collapse')))
 
     def get_page(self):
         ''' Function to navigate to Requests page. '''
