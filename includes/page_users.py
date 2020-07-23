@@ -4,6 +4,7 @@
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+import time
 
 
 class PageUsers:
@@ -18,7 +19,13 @@ class PageUsers:
     def paths_users(self):
         ''' Function to get page elements. '''
         self.user_search_bar = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//input[@placeholder='Search']")))
-        self.non_admin_edit = self.wait.until(EC.visibility_of_element_located((By.XPATH, "(//button[@title='Edit'])[2]")))
+        self.create_user_button = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//button[@class='btn btn-secondary']")))
+
+        try:
+            self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "(//button[@title='Edit'])[2]")))
+        # Need to run test to find exact exception type
+        except:
+            pass
 
     def search_long_string(self):
         ''' Function to input a long string in the search user bar. '''
@@ -29,4 +36,10 @@ class PageUsers:
     def edit_non_admin(self):
         ''' Function to edit a non admin user. '''
         self.paths_users()
-        self.non_admin_edit.click()
+        self.non_admin_user.click()
+
+    def create_user(self):
+        ''' Opens the create user interface'''
+        self.paths_users()
+        time.sleep(5)
+        self.create_user_button.click()

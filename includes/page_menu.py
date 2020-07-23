@@ -17,4 +17,4 @@ class PageMenu:
 
     def goto_admin(self):
         ''' Function to navigate to the admin tab. '''
-        self.driver.get(data['server_url'] + '/admin/users')
+        self.driver.get(self.data['server_url'] + '/admin/users')

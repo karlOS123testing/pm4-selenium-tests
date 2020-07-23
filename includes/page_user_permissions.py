@@ -28,9 +28,9 @@ class PageUserPermissions:
             self.english_auth_edit_client = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//label[contains(text(), 'Edit Auth-Clients')]")))
             self.english_auth_see_client = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//label[contains(text(), 'View Auth-Clients')]")))
 
-            self.bool_english_permissions_items = True
+            self.is_translated = True
         except TimeoutException:
-            self.bool_english_permissions_items = False
+            self.is_translated = False
 
     def goto_user_information(self):
         ''' Click on the user information tab'''
@@ -46,7 +46,7 @@ class PageUserPermissions:
         ''' Check that the permissions strings are on english'''
         self.paths_user_permissions()
 
-        if self.bool_english_permissions_items:
+        if self.is_translated:
             return True
 
         else:
