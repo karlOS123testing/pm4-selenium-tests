@@ -36,6 +36,7 @@ class PageCreateUser:
         self.new_user_save = self.wait.until(EC.visibility_of_element_located((By.ID, "saveUser")))
 
     def fill_new_user(self):
+        ''' Fills the fields of a new user'''
         self.paths_create_user()
         self.new_user_username.send_keys(self.user_information)
         self.new_user_firstname.send_keys(self.user_information)

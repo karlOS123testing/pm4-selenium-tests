@@ -39,7 +39,7 @@ class PageUsers:
         self.non_admin_user.click()
 
     def create_user(self):
-        ''' Opens the create user interface'''
+        ''' Crerates a new user using fill_new_user '''
         self.paths_users()
         self.create_user_button.click()
         PageCreateUser(self.driver, self.data).fill_new_user()

@@ -55,7 +55,7 @@ class PageUserInformation:
         }
 
     def change_password(self):
-        ''' Function to edit a non admin user. '''
+        ''' Changes the password of the user'''
         self.paths_user_information()
         self.password.send_keys(self.user_pass)
         self.confirm_password.send_keys(self.user_pass)
