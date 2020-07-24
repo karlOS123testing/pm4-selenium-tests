@@ -23,7 +23,8 @@ class Prerequisites:
         # User check
         try:
             self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "(//button[@title='Edit'])[2]")))
+            return True
         # Need to run test to find exact exception type
         except TimeoutException:
             PageUsers(self.driver, self.data).create_user()
-            PageCreateUser(self.driver, self.data).fill_new_user()
+            return False
