@@ -3,6 +3,7 @@
 
 from includes.page_users import PageUsers
 from includes.page_create_user import PageCreateUser
+from includes.page_user_information import PageUserInformation
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -23,6 +24,8 @@ class Prerequisites:
         # User check
         try:
             self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "(//button[@title='Edit'])[2]")))
+            PageUsers(self.driver, self.data).edit_non_admin()
+            PageUserInformation(self.driver, self.data).change_password()
             return True
         # Need to run test to find exact exception type
         except TimeoutException:
