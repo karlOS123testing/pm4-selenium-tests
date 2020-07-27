@@ -40,4 +40,3 @@ class TestRequestsTimeout(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(TestRequestsTimeout, data, __main__)
-    print(output)
