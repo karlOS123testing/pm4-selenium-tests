@@ -4,7 +4,7 @@
 # Check if using local environment
 from os import getenv
 
-""" if getenv('ENVIRONMENT') != 'local':
+if getenv('ENVIRONMENT') != 'local':
     from test_parent import BaseTest
     from util import run_test
     from page_login import PageLogin
@@ -12,22 +12,22 @@ from os import getenv
     from page_user_information import PageUserInformation
     from page_menu import PageMenu
     from prerequisites import Prerequisites
-    from page_user_permissions import PageUserPermissions """
+    from page_user_permissions import PageUserPermissions
 
     
 # If using local environment
-""" else: """
-from sys import path
-path.append('../')
-from includes.test_parent import BaseTest
-from includes.util import run_test
-from includes.page_login import PageLogin
-from includes.page_users import PageUsers
-from includes.page_user_information import PageUserInformation
-from includes.page_menu import PageMenu
-from includes.prerequisites import Prerequisites
-from includes.page_user_permissions import PageUserPermissions
-from __init__ import data
+else:
+    from sys import path
+    path.append('../')
+    from includes.test_parent import BaseTest
+    from includes.util import run_test
+    from includes.page_login import PageLogin
+    from includes.page_users import PageUsers
+    from includes.page_user_information import PageUserInformation
+    from includes.page_menu import PageMenu
+    from includes.prerequisites import Prerequisites
+    from includes.page_user_permissions import PageUserPermissions
+    from __init__ import data
 
 
 class Four283(BaseTest):
