@@ -1,10 +1,24 @@
 #!/usr/local/bin/python3
 """ Prerequisites set """
 
-from includes.page_users import PageUsers
-from includes.page_create_user import PageCreateUser
-from includes.page_menu import PageMenu
-from includes.page_user_information import PageUserInformation
+# Check if using local environment
+from os import getenv
+
+if getenv('ENVIRONMENT') != 'local':
+    from includes.page_users import PageUsers
+    from includes.page_create_user import PageCreateUser
+    from includes.page_menu import PageMenu
+    from includes.page_user_information import PageUserInformation
+
+
+# If using local environment
+else:
+    from sys import path
+    from includes.page_users import PageUsers
+    from includes.page_create_user import PageCreateUser
+    from includes.page_menu import PageMenu
+    from includes.page_user_information import PageUserInformation
+
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
