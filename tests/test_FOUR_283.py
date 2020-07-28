@@ -45,12 +45,13 @@ class Four283(BaseTest):
         # Test for prerequisites
         Prerequisites(self.driver, data).check_users_exists() 
 
-        # Insert the 60 characters string on the searchbar
+        # Go to user information and change the language
         PageUsers(self.driver, data).edit_non_admin()
         PageUserInformation(self.driver, data).change_user_language("english")
         PageUserInformation(self.driver, data).goto_user_permissions()
 
-        # Insert the 60 characters string on the searchbar        
+        # Opens the auth permissions and check for translation     
+        PageUserPermissions(self.driver, data).open_auth_accordeon()
         self.assertTrue(PageUserPermissions(self.driver, data).check_permissions_english_translation())
 
         
