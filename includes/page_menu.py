@@ -18,3 +18,8 @@ class PageMenu:
     def goto_admin(self):
         ''' Function to navigate to the admin tab. '''
         self.driver.get(self.data['server_url'] + '/admin/users')
+
+    def goto_request(self):
+        ''' Function to navigate to the request tab. '''
+        self.driver.get(self.data['server_url'] + '/admin/request')
+        

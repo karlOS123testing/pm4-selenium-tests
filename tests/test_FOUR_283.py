@@ -38,20 +38,6 @@ class Four283(BaseTest):
 
         # Login using configured url, workspace, username, and password
         self.driver = PageLogin(self.driver, data).login()
-
-        # Go to the admin tab
-        PageMenu(self.driver, data).goto_admin()
-
-        # Test for prerequisites
-        Prerequisites(self.driver, data).check_users_exists() 
-
-        # Go to user information and change the language
-        PageUsers(self.driver, data).edit_non_admin()
-        PageUserInformation(self.driver, data).change_user_language("english")
-        PageUserInformation(self.driver, data).goto_user_permissions()
-
-        # Opens the auth permissions and check for translation     
-        PageUserPermissions(self.driver, data).open_auth_accordeon()
         self.assertTrue(PageUserPermissions(self.driver, data).check_permissions_english_translation())
 
         
@@ -59,4 +45,3 @@ class Four283(BaseTest):
 if __name__ == "__main__":
     import __main__
     output = run_test(Four283, data, __main__)
-    print(output)

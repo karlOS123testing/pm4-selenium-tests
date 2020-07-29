@@ -1,6 +1,6 @@
 [	
   {
-    "name": "long-string-in-users-search-field",
-    "path": "tests/test_TCP4_1.py"
+    "name": "Check the auth permissions english translation",
+    "path": "tests/test_FOUR_283.py"
   }
 ]

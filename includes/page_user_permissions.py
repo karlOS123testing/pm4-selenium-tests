@@ -1,10 +1,37 @@
 #!/usr/local/bin/python3
 """ User Permissions Page class. """
 
+
+# Check if using local environment
+from os import getenv
+
+if getenv('ENVIRONMENT') != 'local':
+    from test_parent import BaseTest
+    from util import run_test
+    from page_login import PageLogin
+    from page_users import PageUsers
+    from page_user_information import PageUserInformation
+    from page_menu import PageMenu
+    from prerequisites import Prerequisites
+
+ 
+# If using local environment
+else:
+    from sys import path
+    path.append('../')
+    from includes.test_parent import BaseTest
+    from includes.util import run_test
+    from includes.page_login import PageLogin
+    from includes.page_users import PageUsers
+    from includes.page_user_information import PageUserInformation
+    from includes.page_menu import PageMenu
+    from includes.prerequisites import Prerequisites
+
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from __init__ import data
 
 
 class PageUserPermissions:
@@ -44,6 +71,19 @@ class PageUserPermissions:
 
     def check_permissions_english_translation(self):
         ''' Check that the permissions strings are on english'''
+
+        # Test for the prerequisites
+        Prerequisites(self.driver, data).check_users_exists()
+
+        # Go to user information and change the language
+        PageMenu(self.driver, self.data).goto_admin()
+        PageUsers(self.driver, data).edit_non_admin()
+        PageUserInformation(self.driver, data).change_user_language("english")
+
+        # Opens the auth permissions and check for translation
+        PageUserInformation(self.driver, data).goto_user_permissions()
+        PageUserPermissions(self.driver, data).open_auth_accordeon()
+
         self.paths_user_permissions()
 
         if self.is_translated:
