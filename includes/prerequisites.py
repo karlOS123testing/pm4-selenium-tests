@@ -5,10 +5,10 @@
 from os import getenv
 
 if getenv('ENVIRONMENT') != 'local':
-    from includes.page_users import PageUsers
-    from includes.page_create_user import PageCreateUser
-    from includes.page_menu import PageMenu
-    from includes.page_user_information import PageUserInformation
+    from page_users import PageUsers
+    from page_create_user import PageCreateUser
+    from page_menu import PageMenu
+    from page_user_information import PageUserInformation
 
 
 # If using local environment
