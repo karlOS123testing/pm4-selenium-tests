@@ -39,7 +39,7 @@ class Prerequisites:
     def check_users_exists(self):
         ''' Check if there are 2 users, create one if not'''
 
-        PageMenu(self.driver, data).goto_admin()
+        PageMenu(self.driver, self.data).goto_admin()
         # User check
         try:    # changes the non-admin user password if it already exists
             self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "(//button[@title='Edit'])[2]")))
