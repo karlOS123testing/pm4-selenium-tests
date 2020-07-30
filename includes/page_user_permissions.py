@@ -78,8 +78,8 @@ class PageUserPermissions:
 
         # Go to user information and change the language
         PageMenu(self.driver, self.data).goto_admin()
-        PageUsers(self.driver, data).edit_non_admin()
-        PageUserInformation(self.driver, data).change_user_language("english")
+        PageUsers(self.driver, self.data).edit_non_admin()
+        PageUserInformation(self.driver, self.data).change_user_language("english")
 
         # Opens the auth permissions and check for translation
         PageUserInformation(self.driver, self.data).goto_user_permissions()
