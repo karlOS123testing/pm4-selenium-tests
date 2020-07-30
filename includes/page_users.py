@@ -1,7 +1,18 @@
 #!/usr/local/bin/python3
 """ Users Page class. """
 
-from includes.page_create_user import PageCreateUser
+# Check if using local environment
+from os import getenv
+
+if getenv('ENVIRONMENT') != 'local':
+    from page_create_user import PageCreateUser
+
+    
+# If using local environment
+else:
+    from includes.page_create_user import PageCreateUser
+
+
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
