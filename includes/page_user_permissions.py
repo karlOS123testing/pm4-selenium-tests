@@ -14,7 +14,7 @@ if getenv('ENVIRONMENT') != 'local':
     from page_menu import PageMenu
     from prerequisites import Prerequisites
 
- 
+
 # If using local environment
 else:
     from sys import path
