@@ -7,7 +7,6 @@ from os import getenv
 if getenv('ENVIRONMENT') != 'local':
     from page_create_user import PageCreateUser
 
-    
 # If using local environment
 else:
     from includes.page_create_user import PageCreateUser

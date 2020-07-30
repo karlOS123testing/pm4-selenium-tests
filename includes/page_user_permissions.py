@@ -26,12 +26,13 @@ else:
     from includes.page_user_information import PageUserInformation
     from includes.page_menu import PageMenu
     from includes.prerequisites import Prerequisites
+    from __init__ import data
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
-from __init__ import data
+
 
 
 class PageUserPermissions:
