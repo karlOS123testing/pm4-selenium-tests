@@ -74,7 +74,7 @@ class PageUserPermissions:
         ''' Check that the permissions strings are on english'''
 
         # Test for the prerequisites
-        Prerequisites(self.driver, data).check_users_exists()
+        Prerequisites(self.driver, self.data).check_users_exists()
 
         # Go to user information and change the language
         PageMenu(self.driver, self.data).goto_admin()
@@ -82,8 +82,8 @@ class PageUserPermissions:
         PageUserInformation(self.driver, data).change_user_language("english")
 
         # Opens the auth permissions and check for translation
-        PageUserInformation(self.driver, data).goto_user_permissions()
-        PageUserPermissions(self.driver, data).open_auth_accordeon()
+        PageUserInformation(self.driver, self.data).goto_user_permissions()
+        PageUserPermissions(self.driver, self.data).open_auth_accordeon()
 
         self.paths_user_permissions()
 
