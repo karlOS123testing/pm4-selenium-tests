@@ -13,7 +13,6 @@ if getenv('ENVIRONMENT') != 'local':
     from page_menu import PageMenu
     from prerequisites import Prerequisites
     from page_user_permissions import PageUserPermissions
-    from __init__ import data
 
     
 # If using local environment
@@ -28,6 +27,7 @@ else:
     from includes.page_menu import PageMenu
     from includes.prerequisites import Prerequisites
     from includes.page_user_permissions import PageUserPermissions
+    from __init__ import data
 
 
 class Four283(BaseTest):
