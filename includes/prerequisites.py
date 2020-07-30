@@ -9,6 +9,7 @@ if getenv('ENVIRONMENT') != 'local':
     from page_create_user import PageCreateUser
     from page_menu import PageMenu
     from page_user_information import PageUserInformation
+    from __init__ import data
 
 
 # If using local environment
@@ -18,7 +19,6 @@ else:
     from includes.page_create_user import PageCreateUser
     from includes.page_menu import PageMenu
     from includes.page_user_information import PageUserInformation
-    from __init__ import data
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By

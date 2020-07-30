@@ -13,6 +13,7 @@ if getenv('ENVIRONMENT') != 'local':
     from page_menu import PageMenu
     from prerequisites import Prerequisites
     from page_user_permissions import PageUserPermissions
+    from __init__ import data
 
     
 # If using local environment
@@ -27,14 +28,13 @@ else:
     from includes.page_menu import PageMenu
     from includes.prerequisites import Prerequisites
     from includes.page_user_permissions import PageUserPermissions
-    from __init__ import data
 
 
 class Four283(BaseTest):
-    ''' a string of 60 scharacters can be used in the user search input '''
+    ''' Confim that the auth permissions can be translated '''
 
     def test_four_283(self):
-        '''Go to the users page and input a 60 characters string in the searchbar'''
+        ''' Go to the user, change its language, and check that the auth permissions are translated '''
 
         # Login using configured url, workspace, username, and password
         self.driver = PageLogin(self.driver, data).login()
