@@ -8,8 +8,7 @@ if getenv('ENVIRONMENT') != 'local':
     from page_users import PageUsers
     from page_create_user import PageCreateUser
     from page_menu import PageMenu
-    from page_user_information import PageUserInformation
-    
+    from page_user_information import PageUserInformation  
 
 
 # If using local environment
