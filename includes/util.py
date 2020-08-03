@@ -8,6 +8,7 @@ from io import StringIO
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 
 def run_test(classname, data, modulename):
@@ -26,12 +27,17 @@ def run_test(classname, data, modulename):
     if not modulename:
         return 'modulename missing'
 
-    suite = unittest.TestLoader().loadTestsFromModule(modulename)
+    suite = CustomTestLoader().loadTestsFromModule(modulename)
     classname.data = data
     with StringIO() as buffer:
         with redirect_stdout(buffer):
-            unittest.TextTestRunner(stream=buffer).run(suite)
-            return {"result": parse_results(buffer.getvalue()), "message": buffer.getvalue()}
+            log = CustomTextTestRunner(stream=buffer).run(suite).log
+            if 'ERROR' in log[-1]:
+                log[-1] = parse_log_error(log[-1])
+            elif 'WARNING' in log[-1]:
+                log[-1] = parse_log_warning(log[-1])
+            test_output = buffer.getvalue()
+            return {"result": parse_results(test_output), "message": test_output}
 
 def parse_results(buffer):
     ''' Function to parse the unittest results into PM4-friendly format.
