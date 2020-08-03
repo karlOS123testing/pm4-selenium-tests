@@ -10,6 +10,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class BaseTest(unittest.TestCase):
     """ The BaseTest class from which tests will inherit. """
+    page = ''
+    log = []
 
     @classmethod
     def setUpClass(cls):
