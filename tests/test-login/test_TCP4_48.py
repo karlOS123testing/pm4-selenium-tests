@@ -28,7 +28,7 @@ class TestLoginPageUsernameField(BaseTest):
         login_page = LoginPage(self.driver, data)
 
         # Check if browser is at login page
-        assert login_page.is_url_matches()
+        self.assertTrue(login_page.is_url_matches())
 
         # Enter long string in username field
         long_username = util.generate_long_text()
