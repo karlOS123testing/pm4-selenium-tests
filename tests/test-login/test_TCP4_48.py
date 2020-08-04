@@ -9,15 +9,10 @@ if getenv('ENVIRONMENT') == 'local':
     from sys import path
     path.append('../includes')
 
-import random
-import string
 from test_parent import BaseTest
 import util
 from page import *
 import unittest
-from selenium.webdriver.support.ui import WebDriverWait, Select
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class TestLoginPageUsernameField(BaseTest):
