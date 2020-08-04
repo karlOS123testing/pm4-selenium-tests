@@ -1,11 +1,11 @@
-from element import BasePageElement
+from element import *
 from locators import *
 import util
 
 
 class UsernameFieldElement(BasePageElement):
     """ Class to get search text from specified locator. """
-
+    
     # Locator for search box where string is entered
     locator = 'username'
 
@@ -19,7 +19,7 @@ class BasePage(object):
 class LoginPage(BasePage):
     """ Login Page actions. """
 
-    username_field_element = UsernameFieldElement()
+    username_field_element = UsernameFieldElement('ID')
 
     def is_url_matches(self):
         ''' Verifies page URL matches login page. '''
