@@ -1,14 +1,6 @@
 [
   {
     "name": "test-edit-user-job-title",
-    "path": "tests/test-admin/test-users/test_TCP4_609.py"
-  },
-  {
-    "name": "test-edit-user-email",
-    "path": "tests/test-admin/test-users/test_TCP4_610.py"
-  },
-  {
-    "name": "test-edit-user-phone",
-    "path": "tests/test-admin/test-users/test_TCP4_611.py"
+    "path": "tests/test-login/test_TCP4_48.py"
   }
 ]
