@@ -1,6 +1,6 @@
 [
   {
-    "name": "test-edit-user-job-title",
+    "name": "test-login-long-username",
     "path": "tests/test-login/test_TCP4_48.py"
   }
 ]
