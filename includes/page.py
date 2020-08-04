@@ -81,6 +81,55 @@ class DesignerPage(BasePage):
 class AdminPage(BasePage):
     """ Admin Page actions. """
 
+    def __init__(self, driver, data):
+        ''' Instantiate DesignerPage class. '''
+        super(AdminPage, self).__init__(driver, data)
+        self.page_url = self.data['server_url'] + '/admin/users'
+
+    def go_to_page(self):
+        ''' Navigates to page. '''
+        self.driver.get(self.page_url)
+
     def is_url_matches(self):
-        ''' Verifies page URL matches users route. '''
-        return self.driver.current_url == self.data['server_url'] + '/admin/users'
+        ''' Verifies page URL matches processes route. '''
+        return self.driver.current_url == self.page_url
+
+    def click_users_tab(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.USERS_TAB)
+        element.click()
+
+    def click_deleted_users_tab(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.DELETED_USERS_TAB)
+        element.click()
+
+    def click_users_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.USERS_BUTTON)
+        element.click()
+
+    def click_groups_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.GROUPS_BUTTON)
+        element.click()
+
+    def click_auth_clients_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.AUTH_CLIENTS_BUTTON)
+        element.click()
+
+    def click_customize_ui_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.CUSTOMIZE_UI_BUTTON)
+        element.click()
+
+    def click_queue_management_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.QUEUE_MANAGEMENT_BUTTON)
+        element.click()
+
+    def click_script_executors_button(self):
+        ''' Clicks on Users tab. '''
+        element = self.driver.find_element(*AdminPageLocators.SCRIPT_EXECUTORS_BUTTON)
+        element.click()

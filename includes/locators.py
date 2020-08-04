@@ -14,3 +14,14 @@ class DesignerPageLocators(object):
     IN_PROGRESS = (By.XPATH , "//i[@class='fas nav-icon fa-clipboard-list']")
     COMPLETED = (By.XPATH , "//i[@class='fas nav-icon fa-clipboard-check']")
     ALL_REQUESTS = (By.XPATH , "//i[@class='fas nav-icon fa-clipboard']")
+
+class AdminPageLocators(object):
+    """ Class for Admin Page locators. All Admin page locators here. """
+    USERS_TAB = (By.ID , 'nav-users-tab')
+    DELETED_USERS_TAB = (By.ID, 'nav-deleted-users-tab')
+    USERS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-user']")
+    GROUPS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-users']")
+    AUTH_CLIENTS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-key']")
+    CUSTOMIZE_UI_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-palette']")
+    QUEUE_MANAGEMENT_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-infinity']")
+    SCRIPT_EXECUTORS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-code']")
