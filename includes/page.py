@@ -1,9 +1,10 @@
+#!/usr/local/bin/python3
+
 from element import *
 from locators import *
 import util
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """
     Classes:
         BasePageShell
@@ -57,8 +58,8 @@ class BasePage(BasePageShell):
         element = self.driver.find_element(*BasePageLocators.AVATAR)
         element.click()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
     Login Page: /login
     Classes:
@@ -94,7 +95,6 @@ class LoginPage(BasePageShell):
     username_field_element = UsernameFieldElement('ID')
     password_field_element = PasswordFieldElement('ID')
 
-
     def login(self):
         ''' Function to log user in to workspace.
         '''
@@ -107,7 +107,6 @@ class LoginPage(BasePageShell):
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """
     Requests Page: /requests
     Classes:
@@ -146,7 +145,6 @@ class RequestsPage(BasePage):
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """
     Admin Page: /admin/users
     Classes:
@@ -205,7 +203,6 @@ class AdminPage(BasePage):
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """
     Designer Page: /processes
     Classes:
