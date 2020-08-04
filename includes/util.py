@@ -3,6 +3,8 @@
 """
 
 import unittest
+import random
+import string
 from contextlib import redirect_stdout
 from io import StringIO
 from selenium.webdriver.support.ui import WebDriverWait
@@ -52,19 +54,16 @@ def parse_results(buffer):
     else:
         return 'ERROR'
 
-def login(url, username, password, driver):
-    ''' Function to log user in to workspace.
-    '''
-    # Navigate to server
-    driver.get(url)
+def generate_long_text():
+    ''' Function to generate a random string 95 chars long. '''
+    return ''.join(random.choice(string.ascii_letters) for n in range(95))
 
-    # Wait for login page to load
-    wait = WebDriverWait(driver, 30)
-    wait.until(EC.element_to_be_clickable((By.NAME, 'login')))
+def generate_text():
+    ''' Function to generate a random string 10 chars long. '''
+    return ''.join(random.choice(string.ascii_letters) for n in range(10))
 
-    # Login
-    driver.find_element_by_id('username').send_keys(username)
-    driver.find_element_by_id('password').send_keys(password)
-    driver.find_element_by_name('login').click()
-
-    return driver
+def generate_email():
+    ''' Function to generate a random email. '''
+    return ''.join(random.choice(string.ascii_letters) for n in range(10)) +\
+        '@' + ''.join(random.choice(string.ascii_letters) for n in range(5)) +\
+        '.' + ''.join(random.choice(string.ascii_letters) for n in range(5))
