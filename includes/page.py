@@ -29,6 +29,34 @@ class BasePageShell(object):
         return self.driver.current_url == self.page_url
 
 
+class BasePage(BasePageShell):
+    """ Base page class from which other page classes inherit. """
+
+    def click_requests_link(self):
+        ''' Clicks on My Requests. '''
+        element = self.driver.find_element(*BasePageLocators.REQUESTS_LINK)
+        element.click()
+
+    def click_tasks_link(self):
+        ''' Clicks on My Requests. '''
+        element = self.driver.find_element(*BasePageLocators.TASKS_LINK)
+        element.click()
+
+    def click_designer_link(self):
+        ''' Clicks on My Requests. '''
+        element = self.driver.find_element(*BasePageLocators.DESIGNER_LINK)
+        element.click()
+
+    def click_admin_link(self):
+        ''' Clicks on My Requests. '''
+        element = self.driver.find_element(*BasePageLocators.ADMIN_LINK)
+        element.click()
+
+    def click_avatar(self):
+        ''' Clicks on My Requests. '''
+        element = self.driver.find_element(*BasePageLocators.AVATAR)
+        element.click()
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """

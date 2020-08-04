@@ -2,6 +2,14 @@
 
 from selenium.webdriver.common.by import By
 
+class BasePageLocators(object):
+    """ Class for Base Page locators. Navigation bar locators here. """
+    REQUESTS_LINK = (By.LINK_TEXT, 'Requests')
+    TASKS_LINK = (By.LINK_TEXT, 'Tasks')
+    DESIGNER_LINK = (By.LINK_TEXT, 'Designer')
+    ADMIN_LINK = (By.LINK_TEXT, 'Admin')
+    AVATAR = (By.ID, 'avatarMenu')
+
 class LoginPageLocators(object):
     """ Class for Login Page locators. All Login page locators here. """
     USERNAME = (By.ID, 'username')
