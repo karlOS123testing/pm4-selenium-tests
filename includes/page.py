@@ -5,7 +5,7 @@ import util
 
 class UsernameFieldElement(BasePageElement):
     """ Class to get search text from specified locator. """
-    
+
     # Locator for search box where string is entered
     locator = 'username'
 
@@ -16,14 +16,20 @@ class BasePage(object):
         self.driver = driver
         self.data = data
 
+
 class LoginPage(BasePage):
     """ Login Page actions. """
+
+    def __init__(self, driver, data):
+        ''' Instantiate LoginPage class. '''
+        super(LoginPage, self).__init__(driver, data)
+        self.page_url = self.data['server_url'] + '/login'
 
     username_field_element = UsernameFieldElement('ID')
 
     def is_url_matches(self):
         ''' Verifies page URL matches login page. '''
-        return self.driver.current_url == self.data['server_url'] + '/login'
+        return self.driver.current_url == self.page_url
 
     def login(self):
         ''' Function to log user in to workspace.
@@ -39,9 +45,18 @@ class LoginPage(BasePage):
 class DesignerPage(BasePage):
     """ Designer Page actions. """
 
+    def __init__(self, driver, data):
+        ''' Instantiate DesignerPage class. '''
+        super(DesignerPage, self).__init__(driver, data)
+        self.page_url = self.data['server_url'] + '/processes'
+
+    def go_to_page(self):
+        ''' Navigates to page. '''
+        self.driver.get()
+
     def is_url_matches(self):
         ''' Verifies page URL matches processes route. '''
-        return self.driver.current_url == self.data['server_url'] + '/processes'
+        return self.driver.current_url == self.page_url
 
     def click_my_requests_button(self):
         ''' Clicks on My Requests. '''
@@ -65,3 +80,7 @@ class DesignerPage(BasePage):
 
 class AdminPage(BasePage):
     """ Admin Page actions. """
+
+    def is_url_matches(self):
+        ''' Verifies page URL matches users route. '''
+        return self.driver.current_url == self.data['server_url'] + '/admin/users'
