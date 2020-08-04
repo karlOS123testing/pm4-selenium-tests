@@ -52,7 +52,7 @@ class DesignerPage(BasePage):
 
     def go_to_page(self):
         ''' Navigates to page. '''
-        self.driver.get()
+        self.driver.get(self.page_url)
 
     def is_url_matches(self):
         ''' Verifies page URL matches processes route. '''
