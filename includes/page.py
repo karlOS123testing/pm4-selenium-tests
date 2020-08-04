@@ -83,7 +83,7 @@ class PasswordFieldElement(BasePageElement):
     locator = 'password'
 
 
-class LoginPage(BasePage):
+class LoginPage(BasePageShell):
     """ Login Page actions. """
 
     def __init__(self, driver, data):
