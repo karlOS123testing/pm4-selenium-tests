@@ -8,7 +8,7 @@ class LoginPageLocators(object):
     PASSWORD = (By.ID, 'password')
     LOGIN_BUTTON = (By.NAME, 'login')
 
-class DesignerPageLocators(object):
+class RequestsPageLocators(object):
     """ Class for Designer Page locators. All Designer page locators here. """
     MY_REQUESTS = (By.XPATH, "//i[@class='fas nav-icon fa-id-badge']")
     IN_PROGRESS = (By.XPATH , "//i[@class='fas nav-icon fa-clipboard-list']")

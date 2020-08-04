@@ -42,13 +42,13 @@ class LoginPage(BasePage):
         return self.driver
 
 
-class DesignerPage(BasePage):
-    """ Designer Page actions. """
+class RequestsPage(BasePage):
+    """ Requests Page actions. """
 
     def __init__(self, driver, data):
-        ''' Instantiate DesignerPage class. '''
+        ''' Instantiate RequestsPage class. '''
         super(DesignerPage, self).__init__(driver, data)
-        self.page_url = self.data['server_url'] + '/processes'
+        self.page_url = self.data['server_url'] + '/requests'
 
     def go_to_page(self):
         ''' Navigates to page. '''
@@ -60,22 +60,22 @@ class DesignerPage(BasePage):
 
     def click_my_requests_button(self):
         ''' Clicks on My Requests. '''
-        element = self.driver.find_element(*DesignerPageLocators.MY_REQUESTS)
+        element = self.driver.find_element(*RequestsPageLocators.MY_REQUESTS)
         element.click()
 
     def click_in_progress_button(self):
         ''' Clicks on In Progress. '''
-        element = self.driver.find_element(*DesignerPageLocators.IN_PROGRESS)
+        element = self.driver.find_element(*RequestsPageLocators.IN_PROGRESS)
         element.click()
 
     def click_completed_button(self):
         ''' Clicks on Completed. '''
-        element = self.driver.find_element(*DesignerPageLocators.COMPLETED)
+        element = self.driver.find_element(*RequestsPageLocators.COMPLETED)
         element.click()
 
     def click_all_requests_button(self):
         ''' Clicks on All Requests. '''
-        element = self.driver.find_element(*DesignerPageLocators.ALL_REQUESTS)
+        element = self.driver.find_element(*RequestsPageLocators.ALL_REQUESTS)
         element.click()
 
 class AdminPage(BasePage):
