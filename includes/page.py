@@ -3,12 +3,6 @@ from locators import *
 import util
 
 
-class UsernameFieldElement(BasePageElement):
-    """ Class to get search text from specified locator. """
-
-    # Locator for search box where string is entered
-    locator = 'username'
-
 class BasePage(object):
     """ Base page class from which other page classes inherit. """
 
@@ -16,6 +10,17 @@ class BasePage(object):
         self.driver = driver
         self.data = data
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+    Login Page: /login
+    Classes:
+        LoginPage
+        UsernameFieldElement
+        PasswordFieldElement
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 class LoginPage(BasePage):
     """ Login Page actions. """
@@ -26,6 +31,7 @@ class LoginPage(BasePage):
         self.page_url = self.data['server_url'] + '/login'
 
     username_field_element = UsernameFieldElement('ID')
+    password_field_element = PasswordFieldElement('ID')
 
     def is_url_matches(self):
         ''' Verifies page URL matches login page. '''
@@ -40,6 +46,30 @@ class LoginPage(BasePage):
         self.driver.find_element_by_name('login').click()
 
         return self.driver
+
+
+class UsernameFieldElement(BasePageElement):
+    """ Class to get search text from specified locator. """
+
+    # Locator for search box where string is entered
+    locator = 'username'
+
+
+class PasswordFieldElement(BasePageElement):
+    """ Class to get search text from specified locator. """
+
+    # Locator for search box where string is entered
+    locator = 'password'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+    Requests Page: /requests
+    Classes:
+        RequestsPage
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 class RequestsPage(BasePage):
@@ -77,6 +107,17 @@ class RequestsPage(BasePage):
         ''' Clicks on All Requests. '''
         element = self.driver.find_element(*RequestsPageLocators.ALL_REQUESTS)
         element.click()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+    Admin Page: /admin/users
+    Classes:
+        AdminPage
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 class AdminPage(BasePage):
     """ Admin Page actions. """
@@ -133,3 +174,13 @@ class AdminPage(BasePage):
         ''' Clicks on Users tab. '''
         element = self.driver.find_element(*AdminPageLocators.SCRIPT_EXECUTORS_BUTTON)
         element.click()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+    Designer Page: /processes
+    Classes:
+        DesignerPage
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
