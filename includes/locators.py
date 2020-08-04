@@ -25,3 +25,13 @@ class AdminPageLocators(object):
     CUSTOMIZE_UI_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-palette']")
     QUEUE_MANAGEMENT_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-infinity']")
     SCRIPT_EXECUTORS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-code']")
+
+class DesignerPageLocators(object):
+    """ Class for Designer Page locators. All Designer page locators here. """
+    PROCESSES_TAB = (By.ID, 'nav-sources-tab')
+    CATEGORIES_TAB = (By.ID, 'nav-categories-tab')
+    ARCHIVED_PROCESSES_TAB = (By.ID, 'nav-archived-tab')
+    PROCESSES_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-play-circle']")
+    SCRIPTS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-code']")
+    SCREENS_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-file-alt']")
+    ENVIRONMENT_VARIABLES_BUTTON = (By.XPATH, "//i[@class='fas nav-icon fa-lock']")

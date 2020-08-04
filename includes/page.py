@@ -12,8 +12,8 @@ import util
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-class BasePage(object):
-    """ Base page class from which other page classes inherit. """
+class BasePageShell(object):
+    """ Base page shell class from which other page classes inherit. """
 
     def __init__(self, driver, data):
         self.driver = driver
@@ -27,6 +27,7 @@ class BasePage(object):
     def is_url_matches(self):
         ''' Verifies page URL matches login page. '''
         return self.driver.current_url == self.page_url
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -195,5 +196,35 @@ class DesignerPage(BasePage):
 
     def click_processes_tab(self):
         ''' Clicks on Processes tab. '''
-        element = self.driver.find_element(*DesignerPageLocators.USERS_TAB)
+        element = self.driver.find_element(*DesignerPageLocators.PROCESSES_TAB)
+        element.click()
+
+    def click_categories_tab(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.CATEGORIES_TAB)
+        element.click()
+
+    def click_archived_processes_tab(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.ARCHIVED_PROCESSES_TAB)
+        element.click()
+
+    def click_processes_button(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.PROCESSES_BUTTON)
+        element.click()
+
+    def click_scripts_button(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.SCRIPTS_BUTTON)
+        element.click()
+
+    def click_screens_button(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.SCREENS_BUTTON)
+        element.click()
+
+    def click_environment_variables_button(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.ENVIRONMENT_VARIABLES_BUTTON)
         element.click()
