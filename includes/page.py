@@ -2,6 +2,15 @@ from element import *
 from locators import *
 import util
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+    Classes:
+        BasePageShell
+        BasePage
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 class BasePage(object):
     """ Base page class from which other page classes inherit. """
@@ -9,7 +18,15 @@ class BasePage(object):
     def __init__(self, driver, data):
         self.driver = driver
         self.data = data
+        self.page_url = self.data['server_url']
 
+    def go_to_page(self):
+        ''' Navigates to page. '''
+        self.driver.get(self.page_url)
+
+    def is_url_matches(self):
+        ''' Verifies page URL matches login page. '''
+        return self.driver.current_url == self.page_url
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -21,31 +38,6 @@ class BasePage(object):
         PasswordFieldElement
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-class LoginPage(BasePage):
-    """ Login Page actions. """
-
-    def __init__(self, driver, data):
-        ''' Instantiate LoginPage class. '''
-        super(LoginPage, self).__init__(driver, data)
-        self.page_url = self.data['server_url'] + '/login'
-
-    username_field_element = UsernameFieldElement('ID')
-    password_field_element = PasswordFieldElement('ID')
-
-    def is_url_matches(self):
-        ''' Verifies page URL matches login page. '''
-        return self.driver.current_url == self.page_url
-
-    def login(self):
-        ''' Function to log user in to workspace.
-        '''
-        # Login
-        self.driver.find_element_by_id('username').send_keys(self.data['username'])
-        self.driver.find_element_by_id('password').send_keys(self.data['password'])
-        self.driver.find_element_by_name('login').click()
-
-        return self.driver
 
 
 class UsernameFieldElement(BasePageElement):
@@ -60,6 +52,29 @@ class PasswordFieldElement(BasePageElement):
 
     # Locator for search box where string is entered
     locator = 'password'
+
+
+class LoginPage(BasePage):
+    """ Login Page actions. """
+
+    def __init__(self, driver, data):
+        ''' Instantiate LoginPage class. '''
+        super(LoginPage, self).__init__(driver, data)
+        self.page_url = self.page_url + '/login'
+
+    username_field_element = UsernameFieldElement('ID')
+    password_field_element = PasswordFieldElement('ID')
+
+
+    def login(self):
+        ''' Function to log user in to workspace.
+        '''
+        # Login
+        self.driver.find_element_by_id('username').send_keys(self.data['username'])
+        self.driver.find_element_by_id('password').send_keys(self.data['password'])
+        self.driver.find_element_by_name('login').click()
+
+        return self.driver
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -78,15 +93,7 @@ class RequestsPage(BasePage):
     def __init__(self, driver, data):
         ''' Instantiate RequestsPage class. '''
         super(DesignerPage, self).__init__(driver, data)
-        self.page_url = self.data['server_url'] + '/requests'
-
-    def go_to_page(self):
-        ''' Navigates to page. '''
-        self.driver.get(self.page_url)
-
-    def is_url_matches(self):
-        ''' Verifies page URL matches processes route. '''
-        return self.driver.current_url == self.page_url
+        self.page_url = self.page_url + '/requests'
 
     def click_my_requests_button(self):
         ''' Clicks on My Requests. '''
@@ -125,15 +132,7 @@ class AdminPage(BasePage):
     def __init__(self, driver, data):
         ''' Instantiate DesignerPage class. '''
         super(AdminPage, self).__init__(driver, data)
-        self.page_url = self.data['server_url'] + '/admin/users'
-
-    def go_to_page(self):
-        ''' Navigates to page. '''
-        self.driver.get(self.page_url)
-
-    def is_url_matches(self):
-        ''' Verifies page URL matches processes route. '''
-        return self.driver.current_url == self.page_url
+        self.page_url = self.page_url + '/admin/users'
 
     def click_users_tab(self):
         ''' Clicks on Users tab. '''
@@ -184,3 +183,17 @@ class AdminPage(BasePage):
         DesignerPage
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+class DesignerPage(BasePage):
+    """ Designer Page actions. """
+
+    def __init__(self, driver, data):
+        ''' Instantiate DesignerPage class. '''
+        super(AdminPage, self).__init__(driver, data)
+        self.page_url = self.data['server_url'] + '/processes'
+
+    def click_processes_tab(self):
+        ''' Clicks on Processes tab. '''
+        element = self.driver.find_element(*DesignerPageLocators.USERS_TAB)
+        element.click()
