@@ -86,14 +86,14 @@ if __name__ == "__main__":
     ''' Assign to data as a key, val pair in order to append relative paths and import files.
     repository_path and data are found in the bootstrap.py file for the Docker container.
     Must be referenced in __main__ call and then passed elsewhere. May be edited elsewhere.
-    '''
-    data['repository_path'] = repository_path
 
-    ''' You may add any key, value pairs to the data object. 
+    data['repository_path'] = repository_path
+    '''
+
+    ''' You may add any key, value pairs to the data object.
 
     data comes with:
       data['server_url']
-      data['server_workspace']
       data['username']
       data['password']
     '''
