@@ -2,14 +2,10 @@
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
 
-import unittest
 import random
 import string
 from contextlib import redirect_stdout
 from io import StringIO
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from test_classes import CustomTextTestRunner, CustomTestLoader
 
 
