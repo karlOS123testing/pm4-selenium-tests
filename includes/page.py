@@ -9,7 +9,7 @@ import util
     Classes:
         BasePageShell:
             Initializes driver, data, and page_url attributes.
-            Includes go_to_page and is_url_matches methods.
+            Includes go_to_page method.
             These attributes and methods are available to all BasePage classes
                 and classes that inherit from BasePage and BasePageShell classes.
 
@@ -174,7 +174,7 @@ class RequestsPage(BasePage):
 
     def __init__(self, driver, data):
         ''' Instantiate RequestsPage class. '''
-        super(DesignerPage, self).__init__(driver, data)
+        super(RequestsPage, self).__init__(driver, data)
         self.page_url = self.page_url + '/requests'
 
     def click_my_requests_button(self):
@@ -292,7 +292,7 @@ class DesignerPage(BasePage):
 
     def __init__(self, driver, data):
         ''' Instantiate DesignerPage class. '''
-        super(AdminPage, self).__init__(driver, data)
+        super(DesignerPage, self).__init__(driver, data)
         self.page_url = self.data['server_url'] + '/processes'
 
     def click_processes_tab(self):
@@ -329,3 +329,36 @@ class DesignerPage(BasePage):
         ''' Clicks on Environment Variables button. '''
         element = self.driver.find_element(*DesignerPageLocators.ENVIRONMENT_VARIABLES_BUTTON)
         element.click()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""
+    Classes:
+        NewPage:
+            Page class skeleton for creating new page classes.
+
+            Reinitializes page_url attribute. self.driver and self.data are
+                inherited from BasePage.
+            Includes go_to_page method inherited from BasePage.
+
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""
+class NewPage(BasePage):
+    ''' New Page actions.
+
+        NewPageLocators are found in /includes/locators.py.
+    '''
+
+
+    def __init__(self, driver, data):
+        ''' Instantiate NewPage class. '''
+        super(NewPage, self).__init__(driver, data)
+        self.page_url = self.data['server_url'] + '/newpage/route'
+
+    def click_page_element(self):
+        ''' Clicks on New Page element. '''
+        element = self.driver.find_element(*NewPageLocators.NEW_PAGE_ELEMENT)
+        element.click()
+"""
