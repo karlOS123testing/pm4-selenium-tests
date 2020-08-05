@@ -83,6 +83,12 @@ class PasswordFieldElement(BasePageElement):
     # Locator for search box where string is entered
     locator = 'password'
 
+class LoginButtonElement(BasePageElement):
+    """ Class to get search text from specified locator. """
+
+    # Locator for search box where string is entered
+    locator = 'login'
+
 
 class LoginPage(BasePageShell):
     """ Login Page actions. """
