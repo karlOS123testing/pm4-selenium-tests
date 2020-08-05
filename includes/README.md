@@ -30,14 +30,14 @@ Class | Function | Attributes
 [`/includes/page.py`](https://github.com/ProcessMaker/pm4-selenium-tests/blob/master/includes/page.py "page.py")
 Class | Function | Extends | Methods | Attributes
 --- | --- | --- | --- | ---
-`BasePageShell` | Defines base page shell | ----- | <ul><li>`__init__()`: instantiates class with attributes</li><li>`go_to_page()`: navigates to `page_url`</li></ul> | <ul><li>`driver`: webdriver instance created in `BaseTest`</li><li>`data`: configuration defined in Trogdor request or in local `__init__.py`</li><li>`page_url`: server url extracted from `data`</li></ul>
+`BasePageShell` | Defines base page shell | ----- | <ul><li>`__init__()`: instantiates class with attributes</li><li>`go_to_page()`: navigates to `page_url`</li></ul> | <ul>instance attributes:<li>`driver`: webdriver instance created in `BaseTest`</li><li>`data`: configuration defined in Trogdor request or in local `__init__.py`</li><li>`page_url`: server url extracted from `data`</li></ul>
 `BasePage` | Defines base page | `BasePageShell` | <ul><li>`click_requests_link()`: clicks on Requests link</li><li>`click_tasks_link()`: click on Tasks link</li><li>`click_designer_link()`: click on Designer link</li><li>`click_admin_link()`: click on Admin link</li><li>`click_avatar()`: click on avatar</li></ul> | -----
 `UsernameFieldElement` | Defines username field element | `BasePageElement` | ----- | <ul><li>`locator`: element identifier</li></ul>
 `PasswordFieldElement` | Defines password field element | `BasePageElement` | ----- | <ul><li>`locator`: element identifier</li></ul>
-`LoginPage` | Defines login page | `BasePageShell` | <ul></ul> | <ul></ul>
-`RequestsPage` | Defines requests page | `BasePage` | <ul></ul> | <ul></ul>
-`AdminPage` | Defines admin page | `BasePage` | <ul></ul> | <ul></ul>
-`DesignerPage` | Defines designer page | `BasePage` | <ul></ul> | <ul></ul>
+`LoginPage` | Defines login page | `BasePageShell` | <ul><li>`__init__()`: redefines `page_url`</li><li>`login()`: logs in to server</ul> | <ul>class attributes:<li>`username_field_element`: instance of `UsernameFieldElement`</li><li>`password_field_element`: instance of `PasswordFieldElement`</li></ul><ul>instance attributes:<li>`page_url`: extended from `BasePageShell` and redefined</li>
+`RequestsPage` | Defines requests page | `BasePage` | <ul><li>`__init__()`: redefines `page_url`</li></ul> | <ul><li>`page_url`: extended from `BasePageShell` and redefined</li></ul>
+`AdminPage` | Defines admin page | `BasePage` | <ul><li>`__init__()`: redefines `page_url`</li></ul> | <ul><li>`page_url`: extended from `BasePageShell` and redefined</li></ul>
+`DesignerPage` | Defines designer page | `BasePage` | <ul><li>`__init__()`: redefines `page_url`</li></ul> | <ul><li>`page_url`: extended from `BasePageShell` and redefined</li></ul>
 
 ## Methods
 
