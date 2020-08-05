@@ -99,9 +99,10 @@ class LoginPage(BasePageShell):
         ''' Function to log user in to workspace.
         '''
         # Login
-        self.driver.find_element_by_id('username').send_keys(self.data['username'])
-        self.driver.find_element_by_id('password').send_keys(self.data['password'])
-        self.driver.find_element_by_name('login').click()
+        self.username_field_element = self.data['username']
+        self.password_field_element = self.data['password']
+        login_button_element = self.driver.find_element(*LoginPageLocators.LOGIN_BUTTON)
+        login_button_element.click()
 
         return self.driver
 
