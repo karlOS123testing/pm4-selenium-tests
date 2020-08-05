@@ -45,10 +45,8 @@ def parse_results(buffer):
 
     if buffer.startswith('.'):
         return 'SUCCESS'
-    elif buffer.startswith('F'):
+    elif buffer.startswith('F') or buffer.startswith('E'):
         return 'FAIL'
-    else:
-        return 'ERROR'
 
 def generate_long_text():
     ''' Function to generate a random string 95 chars long. '''
