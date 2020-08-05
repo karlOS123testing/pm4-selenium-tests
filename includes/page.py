@@ -87,39 +87,57 @@ class BasePage(BasePageShell):
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
-    Login Page: /login
+    Login Page
+    Endpoint: /login
     Classes:
-        LoginPage
-        UsernameFieldElement
-        PasswordFieldElement
+        LoginPage:
+            Reinitializes page_url attribute. self.driver and self.data are
+                inherited from BasePageShell.
+            Instantiates UsernameFieldElement and PasswordFieldElement.
+            Includes login method.
+            These attributes and methods are available to test classes.
+
+        UsernameFieldElement:
+            Includes locator attribute. Inherits self.element_type from
+                BasePageElement.
+            This attribute is available to class instances.
+
+        PasswordFieldElement:
+            Includes locator attribute. Inherits self.element_type from
+                BasePageElement.
+            This attribute is available to class instances.
+
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 class UsernameFieldElement(BasePageElement):
-    """ Class to get search text from specified locator. """
+    """ Class to get username field using specified locator. """
 
     # Locator for search box where string is entered
     locator = 'username'
 
 
 class PasswordFieldElement(BasePageElement):
-    """ Class to get search text from specified locator. """
+    """ Class to get password field using specified locator. """
 
     # Locator for search box where string is entered
     locator = 'password'
 
 
 class LoginPage(BasePageShell):
-    """ Login Page actions. """
+    """ Login Page actions.
+
+        LoginPageLocators are found in /includes/locators.py.
+    """
+
+    username_field_element = UsernameFieldElement('ID')
+    password_field_element = PasswordFieldElement('ID')
 
     def __init__(self, driver, data):
         ''' Instantiate LoginPage class. '''
         super(LoginPage, self).__init__(driver, data)
         self.page_url = self.page_url + '/login'
-
-    username_field_element = UsernameFieldElement('ID')
-    password_field_element = PasswordFieldElement('ID')
 
     def login(self):
         ''' Function to log user in to workspace.
@@ -135,15 +153,24 @@ class LoginPage(BasePageShell):
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
-    Requests Page: /requests
+    Requests Page
+    Endpoint: /requests
     Classes:
-        RequestsPage
+        RequestsPage:
+            Reinitializes page_url attribute. self.driver and self.data are
+                inherited from BasePage.
+            Includes click_my_requests_button, click_in_progress_button,
+                click_completed_button, and click_all_requests_button methods.
+            These attributes and methods are available to test classes.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 class RequestsPage(BasePage):
-    """ Requests Page actions. """
+    """ Requests Page actions.
+
+        RequestsPageLocators are found in /includes/locators.py.
+    """
 
     def __init__(self, driver, data):
         ''' Instantiate RequestsPage class. '''
@@ -173,15 +200,26 @@ class RequestsPage(BasePage):
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
-    Admin Page: /admin/users
+    Admin Page
+    Endpoint: /admin/users
     Classes:
-        AdminPage
+        AdminPage:
+            Reinitializes page_url attribute. self.driver and self.data are
+                inherited from BasePage.
+            Includes click_users_tab, click_deleted_users_tab,
+                click_users_button, click_groups_button, click_auth_clients_button,
+                click_customize_ui_button, click_queue_management_button, and
+                click_script_executors_button methods.
+            These attributes and methods are available to test classes.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 class AdminPage(BasePage):
-    """ Admin Page actions. """
+    """ Admin Page actions.
+
+        AdminPageLocators are found in /includes/locators.py.
+    """
 
     def __init__(self, driver, data):
         ''' Instantiate DesignerPage class. '''
@@ -194,52 +232,63 @@ class AdminPage(BasePage):
         element.click()
 
     def click_deleted_users_tab(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Deleted Users tab. '''
         element = self.driver.find_element(*AdminPageLocators.DELETED_USERS_TAB)
         element.click()
 
     def click_users_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Users button. '''
         element = self.driver.find_element(*AdminPageLocators.USERS_BUTTON)
         element.click()
 
     def click_groups_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Groups button. '''
         element = self.driver.find_element(*AdminPageLocators.GROUPS_BUTTON)
         element.click()
 
     def click_auth_clients_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Auth Clients button. '''
         element = self.driver.find_element(*AdminPageLocators.AUTH_CLIENTS_BUTTON)
         element.click()
 
     def click_customize_ui_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Customize UI button. '''
         element = self.driver.find_element(*AdminPageLocators.CUSTOMIZE_UI_BUTTON)
         element.click()
 
     def click_queue_management_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Queue Management button. '''
         element = self.driver.find_element(*AdminPageLocators.QUEUE_MANAGEMENT_BUTTON)
         element.click()
 
     def click_script_executors_button(self):
-        ''' Clicks on Users tab. '''
+        ''' Clicks on Script Executors button. '''
         element = self.driver.find_element(*AdminPageLocators.SCRIPT_EXECUTORS_BUTTON)
         element.click()
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
-    Designer Page: /processes
+    Designer Page
+    Endpoint: /processes
     Classes:
-        DesignerPage
+        DesignerPage:
+            Reinitializes page_url attribute. self.driver and self.data are
+                inherited from BasePage.
+            Includes click_processes_tab, click_categories_tab,
+                click_archived_processes_tab, click_processes_button,
+                click_scripts_button, click_screens_button, and
+                click_environment_variables_button methods.
+            These attributes and methods are available to test classes.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 class DesignerPage(BasePage):
-    """ Designer Page actions. """
+    """ Designer Page actions.
+
+        DesignerPageLocators are found in /includes/locators.py.
+    """
 
     def __init__(self, driver, data):
         ''' Instantiate DesignerPage class. '''
@@ -252,31 +301,31 @@ class DesignerPage(BasePage):
         element.click()
 
     def click_categories_tab(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Categories tab. '''
         element = self.driver.find_element(*DesignerPageLocators.CATEGORIES_TAB)
         element.click()
 
     def click_archived_processes_tab(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Archived Processes tab. '''
         element = self.driver.find_element(*DesignerPageLocators.ARCHIVED_PROCESSES_TAB)
         element.click()
 
     def click_processes_button(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Processes button. '''
         element = self.driver.find_element(*DesignerPageLocators.PROCESSES_BUTTON)
         element.click()
 
     def click_scripts_button(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Scripts button. '''
         element = self.driver.find_element(*DesignerPageLocators.SCRIPTS_BUTTON)
         element.click()
 
     def click_screens_button(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Screens button. '''
         element = self.driver.find_element(*DesignerPageLocators.SCREENS_BUTTON)
         element.click()
 
     def click_environment_variables_button(self):
-        ''' Clicks on Processes tab. '''
+        ''' Clicks on Environment Variables button. '''
         element = self.driver.find_element(*DesignerPageLocators.ENVIRONMENT_VARIABLES_BUTTON)
         element.click()
