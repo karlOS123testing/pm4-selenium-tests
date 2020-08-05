@@ -48,6 +48,16 @@ def parse_results(buffer):
     elif buffer.startswith('F') or buffer.startswith('E'):
         return 'FAIL'
 
+def parse_log_error(log_message):
+    ''' Function to capture ERROR message.
+    '''
+    return 'ERROR: ' + re.search(r'(?<=ERROR<\/strong>:\s)([^<]+)', log_message).group(0)
+
+def parse_log_warning(log_message):
+    ''' Function to capture WARNING message.
+    '''
+    return 'WARNING: ' + re.search(r'(?<=WARNING<\/strong>:\s)([^<]+)', log_message).group(0)
+
 def generate_long_text():
     ''' Function to generate a random string 95 chars long. '''
     return ''.join(random.choice(string.ascii_letters) for n in range(95))
