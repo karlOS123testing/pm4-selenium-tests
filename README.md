@@ -75,5 +75,10 @@ Inside each test file:
 #### [`/tests` Directory](https://github.com/ProcessMaker/pm4-selenium-tests/tree/master/tests "/tests Directory")
 * Test cases and Test case skeleton
 
-### Feature requests
+### Feedback
+
+#### Feature requests
 * Add a new feature request [here](https://github.com/ProcessMaker/pm4-selenium-tests/issues/new?template=feature_request.md).
+
+#### Bug reports
+* Add a new bug report [here](https://github.com/ProcessMaker/pm4-selenium-tests/issues/new?template=bug_report.md).
