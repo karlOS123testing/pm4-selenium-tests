@@ -51,3 +51,26 @@ Notes:
     * `# chrome_options.add_argument("--headless")`
   * If you want to view python unittest results in your terminal, add this line to the bottom of the test file:
     * `print(output)` 
+
+#### Writing Tests Locally
+
+Inside each test file:
+  * Add these lines to the top of your imports:
+    * `from os import getenv, path`
+    * `if getenv('ENVIRONMENT') == 'local':
+         `from sys import path
+         `path.append('../includes')
+         `from __init__ import data
+
+## Files 
+
+#### [`/includes` Directory](https://github.com/ProcessMaker/ellucian-shared-tests/tree/master/includes "/includes Directory")
+* Subclasses of `unittest` classes
+* `BaseTest` from which test files inherit
+* Helper methods
+* `BasePageShell` and `BasePage` classes, from with other Page classes inherit, and Page class skeleton
+* `BasePageElement` from which Page Element classes inherit
+* Locator classes containing page element locators and locator types
+
+#### [`/tests` Directory](https://github.com/ProcessMaker/ellucian-shared-tests/tree/master/tests "/tests Directory")
+* Test cases
