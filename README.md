@@ -82,3 +82,6 @@ Inside each test file:
 
 #### Bug reports
 * Add a new bug report [here](https://github.com/ProcessMaker/pm4-selenium-tests/issues/new?template=bug_report.md).
+
+#### Contact
+* kelly.hodis@processmaker.com
