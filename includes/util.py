@@ -14,16 +14,16 @@ def run_test(classname, data, modulename):
         and return results in PM4 output variable.
     '''
     if data is {}:
-        return 'data dictionary must not be empty'
+        return {"result": "FAIL", "message": "Cannot run test. data configuration empty."}
 
     if not classname:
-        return 'classname missing'
+        return {"result": "FAIL", "message": "Cannot run test. classname missing."}
 
     if not data:
-        return 'data missing'
+        return {"result": "FAIL", "message": "Cannot run test. data missing."}
 
     if not modulename:
-        return 'modulename missing'
+        return return {"result": "FAIL", "message": "Cannot run test. modulename missing."}
 
     suite = CustomTestLoader().loadTestsFromModule(modulename)
     classname.data = data
