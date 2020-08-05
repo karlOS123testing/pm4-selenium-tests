@@ -2,11 +2,11 @@ ProcessMaker 4 Tests Documentation
 
 # Overview
 
-Ellucian Shared Tests consist of a series of Selenium tests that will be used to automatically validate changes between the shared ProcessMaker and Ellucian architectures.
+PM4 Selenium Tests consist of a series of Selenium tests that will be used to automatically validate changes in ProcessMaker 4 releases.
 
 ## Trogdor
 
-These tests will ultimately be executed within a PM4 custom instance dubbed "Trogdor". Trogdor processes will be initiated via CI/API and then will execute the tests in this repository against the environment specified in the API call. Once the tests have completed a report of the results will be provided.
+These tests will be executed within a PM4 custom instance dubbed "Trogdor". Trogdor processes will be initiated via CI/API or manual requests and then will execute the tests in this repository against the environment specified in the request configuration. Once the tests have completed a report of the results will be provided.
 
 ### Inheritance in Tests
 
@@ -39,17 +39,15 @@ You can develop and run tests locally. In order to do so, you must have the foll
 
 #### Running and Writing Tests Locally
 
-* Create `__init__.py` in root directory
-* Write and save these lines:
-  * `from os import environ`
-  * `environ['ENVIRONMENT'] = 'local'`
+* Create `__init__.py` in /includes directory
+* Write and save this lines:
   * `data = {"server_url": "your/pm4/server/url/here", "username": "your/username/here", "password": "your/password/here"}`
 * Navigate to `/tests` folder
-* Execute test with `ENVIRONMENT='local' ./test_you_want_to_run.py`
+* Execute test with `ENVIRONMENT='local' .path/to/test_you_want_to_run.py`
   * Note: If test is not executable, run `chmod +x test_you_want_to_run.py`
 
 Notes: 
   * If you want to view the tests running in the browser, comment out this line in `/includes/test_parent.py`:
     * `# chrome_options.add_argument("--headless")`
   * If you want to view python unittest results in your terminal, add this line to the bottom of the test file:
-    * `print(output)`
+    * `print(output)` 
