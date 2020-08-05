@@ -30,7 +30,7 @@ Class | Function | Attributes
 [`/includes/page.py`](https://github.com/ProcessMaker/pm4-selenium-tests/blob/master/includes/page.py "page.py")
 Class | Function | Extends | Methods | Attributes
 --- | --- | --- | --- | ---
-`BasePageShell` | Defines base page shell | --- | <ul><li>`__init__()`: instantiates class with attributes</li><li>`go_to_page()`: navigates to `page_url`</li></ul> | <ul></ul>
+`BasePageShell` | Defines base page shell | --- | <ul><li>`__init__()`: instantiates class with attributes</li><li>`go_to_page()`: navigates to `page_url`</li></ul> | <ul><li>`driver`: webdriver instance created in `BaseTest`</li><li>`data`: configuration defined in Trogdor request or in local `__init__.py`</li><li>`page_url`: server url extracted from `data`</li></ul>
 `BasePage` | Defines base page | `BasePageShell` | <ul></ul> | <ul></ul>
 `UsernameFieldElement` | Defines username field element | `BasePageElement` | <ul></ul> | <ul></ul>
 `PasswordFieldElement` | Defines password field element | `BasePageElement` | <ul></ul> | <ul></ul>
