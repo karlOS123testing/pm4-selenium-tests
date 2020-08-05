@@ -73,4 +73,4 @@ Inside each test file:
 * Locator classes containing page element locators and locator types
 
 #### [`/tests` Directory](https://github.com/ProcessMaker/pm4-selenium-tests/tree/master/tests "/tests Directory")
-* Test cases
+* Test cases and Test case skeleton
