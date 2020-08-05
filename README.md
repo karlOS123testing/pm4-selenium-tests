@@ -74,3 +74,5 @@ Inside each test file:
 
 #### [`/tests` Directory](https://github.com/ProcessMaker/pm4-selenium-tests/tree/master/tests "/tests Directory")
 * Test cases and Test case skeleton
+
+### Feature requests
