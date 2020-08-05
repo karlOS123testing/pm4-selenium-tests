@@ -8,6 +8,38 @@ from contextlib import redirect_stdout
 from io import StringIO
 from test_classes import CustomTextTestRunner, CustomTestLoader
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""
+    Methods:
+        run_test:
+            Used in every test file to run tests and format results into
+                {"results": "", "message": ""} output.
+                "results" may be SUCCESS or FAIL.
+                "message" may be test_output, which contains the Python unittest
+                    output redirected into a buffer, or log[-1], which contains
+                    the last custom log message appended during a test.
+
+        parse_results:
+            Used to transform test_output into a SUCCESS / FAIL result.
+
+        parse_log_error:
+            Used to search an html page source for 'ERROR' and capture the 'ERROR'
+                message. Useful for login.
+
+        parse_log_warning:
+            Used to search an html page source for 'WARNING' and capture the 'WARNING'
+                message. Useful for login.
+
+        generate_long_text:
+            Used to generate a random string of text 95 characters long.
+
+        generate_text:
+            Used to generate a random string of text 10 characters long.
+
+        generate_email:
+            Used to generate a randome email address. 
+"""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 def run_test(classname, data, modulename):
     ''' Function to run test and redirect output from stdout
