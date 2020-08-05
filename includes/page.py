@@ -7,8 +7,17 @@ import util
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
     Classes:
-        BasePageShell
-        BasePage
+        BasePageShell:
+            Initializes driver, data, and page_url attributes.
+            Includes go_to_page and is_url_matches methods.
+            These attributes and methods are available to all BasePage classes
+                and classes that inherit from BasePage and BasePageShell classes.
+
+        BasePage:
+            Includes click_requests_link, click_tasks_link,
+                click_designer_link, click_admin_link, and click_avatar methods.
+            These methods are available to all Page classes that inherit from
+                BasePage classes.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -17,17 +26,25 @@ class BasePageShell(object):
     """ Base page shell class from which other page classes inherit. """
 
     def __init__(self, driver, data):
+        ''' Initializes each page with three attributes:
+                driver:
+                    instantited in /includes/test_parent.py.
+                data:
+                    provided through config task on Trogdor server
+                    or through data defined in local __init__ file.
+                page_url:
+                    provided in data.
+        '''
         self.driver = driver
         self.data = data
         self.page_url = self.data['server_url']
 
     def go_to_page(self):
-        ''' Navigates to page. '''
+        ''' Navigates to page_url:
+                provided through config task on Trogdor server
+                or through data defined in local __init__ file.
+        '''
         self.driver.get(self.page_url)
-
-    def is_url_matches(self):
-        ''' Verifies page URL matches login page. '''
-        return self.driver.current_url == self.page_url
 
 
 class BasePage(BasePageShell):
