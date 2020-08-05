@@ -23,7 +23,10 @@ import util
 
 
 class BasePageShell(object):
-    """ Base page shell class from which other page classes inherit. """
+    """ Base page shell class from which two classes inherit:
+            BasePage
+            LoginPage
+    """
 
     def __init__(self, driver, data):
         ''' Initializes each page with three attributes:
@@ -48,30 +51,36 @@ class BasePageShell(object):
 
 
 class BasePage(BasePageShell):
-    """ Base page class from which other page classes inherit. """
+    """ Base page class from which other page classes inherit.
+
+        These methods are made available to all Page classes, aside from LoginPage,
+            because these navigation links are all available on each page.
+
+        BasePageLocators are found in /includes/locators.py.
+    """
 
     def click_requests_link(self):
-        ''' Clicks on My Requests. '''
+        ''' Locates and clicks on Requests link in navigation bar. '''
         element = self.driver.find_element(*BasePageLocators.REQUESTS_LINK)
         element.click()
 
     def click_tasks_link(self):
-        ''' Clicks on My Requests. '''
+        ''' Locates and clicks on Tasks link in navigation bar. '''
         element = self.driver.find_element(*BasePageLocators.TASKS_LINK)
         element.click()
 
     def click_designer_link(self):
-        ''' Clicks on My Requests. '''
+        ''' Locates and clicks on Designer link in navigation bar. '''
         element = self.driver.find_element(*BasePageLocators.DESIGNER_LINK)
         element.click()
 
     def click_admin_link(self):
-        ''' Clicks on My Requests. '''
+        ''' Locates and clicks on Admin link in navigation bar. '''
         element = self.driver.find_element(*BasePageLocators.ADMIN_LINK)
         element.click()
 
     def click_avatar(self):
-        ''' Clicks on My Requests. '''
+        ''' Locates and clicks on Avatar icon in navigation bar. '''
         element = self.driver.find_element(*BasePageLocators.AVATAR)
         element.click()
 
