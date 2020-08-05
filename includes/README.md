@@ -28,6 +28,16 @@ Class | Function | Attributes
 `[...]PageLocators` | Defines page element locators | <ul><li>[...] page elements</li></ul>
 
 [`/includes/page.py`](https://github.com/ProcessMaker/pm4-selenium-tests/blob/master/includes/page.py "page.py")
+Class | Function | Extends | Methods | Attributes
+--- | --- | --- | --- | ---
+`BasePageShell` | Defines base page shell | --- | <ul><li>`__init__()`: instantiates class with attributes</li><li>`go_to_page()`: navigates to `page_url`</li></ul> | <ul></ul>
+`BasePage` | Defines base page | `BasePageShell` | <ul></ul> | <ul></ul>
+`UsernameFieldElement` | Defines username field element | `BasePageElement` | <ul></ul> | <ul></ul>
+`PasswordFieldElement` | Defines password field element | `BasePageElement` | <ul></ul> | <ul></ul>
+`LoginPage` | Defines login page | `BasePageShell` | <ul></ul> | <ul></ul>
+`RequestsPage` | Defines requests page | `BasePage` | <ul></ul> | <ul></ul>
+`AdminPage` | Defines admin page | `BasePage` | <ul></ul> | <ul></ul>
+`DesignerPage` | Defines designer page | `BasePage` | <ul></ul> | <ul></ul>
 
 ## Methods
 
