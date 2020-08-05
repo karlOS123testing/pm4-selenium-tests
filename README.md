@@ -57,10 +57,10 @@ Notes:
 Inside each test file:
   * Add these lines to the top of your imports:
     * `from os import getenv, path`
-    * `if getenv('ENVIRONMENT') == 'local':
-         `from sys import path
-         `path.append('../includes')
-         `from __init__ import data
+    * `if getenv('ENVIRONMENT') == 'local':`
+      * `from sys import path`
+      * `path.append('../includes')`
+      * `from __init__ import data`
 
 ## Files 
 
