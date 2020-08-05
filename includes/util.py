@@ -23,7 +23,7 @@ def run_test(classname, data, modulename):
         return {"result": "FAIL", "message": "Cannot run test. data missing."}
 
     if not modulename:
-        return return {"result": "FAIL", "message": "Cannot run test. modulename missing."}
+        return {"result": "FAIL", "message": "Cannot run test. modulename missing."}
 
     suite = CustomTestLoader().loadTestsFromModule(modulename)
     classname.data = data
