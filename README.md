@@ -76,3 +76,4 @@ Inside each test file:
 * Test cases and Test case skeleton
 
 ### Feature requests
+* Add a new feature request [here](https://github.com/ProcessMaker/pm4-selenium-tests/feature-requests/issues/new?template=feature_request.md).
