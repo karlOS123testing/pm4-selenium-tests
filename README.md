@@ -64,7 +64,7 @@ Inside each test file:
 
 ## Files 
 
-#### [`/includes` Directory](https://github.com/ProcessMaker/ellucian-shared-tests/tree/master/includes "/includes Directory")
+#### [`/includes` Directory](https://github.com/ProcessMaker/pm4-selenium-tests/tree/master/includes "/includes Directory")
 * Subclasses of `unittest` classes
 * `BaseTest` from which test files inherit
 * Helper methods
@@ -72,5 +72,5 @@ Inside each test file:
 * `BasePageElement` from which Page Element classes inherit
 * Locator classes containing page element locators and locator types
 
-#### [`/tests` Directory](https://github.com/ProcessMaker/ellucian-shared-tests/tree/master/tests "/tests Directory")
+#### [`/tests` Directory](https://github.com/ProcessMaker/pm4-selenium-tests/tree/master/tests "/tests Directory")
 * Test cases
