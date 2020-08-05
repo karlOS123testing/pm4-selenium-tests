@@ -61,6 +61,15 @@ Inside each test file:
       * `from sys import path`
       * `path.append('../includes')`
       * `from __init__ import data`
+      
+#### Running Tests Remotely
+
+Inside of `config.json`:
+  * Add a dictionary item containing a "name" and the test path relative to the repo root directory:
+  * `{`
+    * `"name": "brief-summary-of-test-case",`
+    * `"path": "tests/test_name.py"`
+  * `}`
 
 ## Files 
 
