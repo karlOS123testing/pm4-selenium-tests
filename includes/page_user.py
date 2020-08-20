@@ -40,9 +40,3 @@ class PageUsers:
         self.paths_users()
         self.non_admin_user.click()
 
-    def create_user(self):
-        ''' Crerates a new user using fill_new_user '''
-        self.paths_users()
-        self.create_user_button.click()
-        PageCreateUser(self.driver, self.data).fill_new_user()
-        self.create_user_succes = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class='alert d-none d-lg-block alertBox alert-dismissible alert-success']")))

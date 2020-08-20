@@ -5,7 +5,10 @@ from os import getenv
 
 if getenv('ENVIRONMENT') != 'local':
     from test_parent import BaseTest
-    from util import run_test
+    from util import run_test    
+    from page_login import PageLogin
+    from page_menu import PageMenu
+    from page_user import PageUsers
 
     
 # If using local environment
