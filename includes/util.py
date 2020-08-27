@@ -2,12 +2,14 @@
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
 
+import sys
+sys.path.append("..")
 import random
 import string
 from contextlib import redirect_stdout
 from io import StringIO
 import re
-from test_classes import CustomTextTestRunner, CustomTestLoader
+from .test_classes import CustomTextTestRunner, CustomTestLoader
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
