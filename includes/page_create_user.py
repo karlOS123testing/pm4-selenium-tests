@@ -4,7 +4,7 @@
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
-from . import util
+import util
 import string
 
 
