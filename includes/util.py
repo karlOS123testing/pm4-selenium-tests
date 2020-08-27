@@ -6,7 +6,8 @@ import random
 import string
 from contextlib import redirect_stdout
 from io import StringIO
-from test_classes import CustomTextTestRunner, CustomTestLoader
+import re
+from .test_classes import CustomTextTestRunner, CustomTestLoader
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
