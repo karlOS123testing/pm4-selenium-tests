@@ -25,7 +25,6 @@ class TestLoginUser(BaseTest):
         login_page.login()
         
         urlUser = self.driver.current_url
-        #print('1 - urlUser: '+urlUser+'**')
 
         self.assertEqual(urlUser,'https://release-testing.processmaker.net/requests')
 
