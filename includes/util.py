@@ -7,7 +7,7 @@ import string
 from contextlib import redirect_stdout
 from io import StringIO
 import re
-from .test_classes import CustomTextTestRunner, CustomTestLoader
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
