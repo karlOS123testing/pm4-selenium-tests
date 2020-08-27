@@ -1,12 +1,21 @@
 #!/usr/local/bin/python3
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
+from os import getenv
+
+if getenv('ENVIRONMENT') != 'local':
+    from test_classes import CustomTextTestRunner, CustomTestLoader
+# If using local environment
+else:
+    from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+
 
 import random
 import string
 from contextlib import redirect_stdout
 from io import StringIO
-from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+import re
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
