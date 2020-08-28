@@ -1,11 +1,12 @@
 #!/usr/local/bin/python3
 
 # Check if using local environment
-
 from os import getenv, path
-from sys import path
-path.append('../includes')
-from __init__ import data
+if getenv('ENVIRONMENT') == 'local':
+    from sys import path
+    path.append('../includes')
+    from __init__ import data
+
 from test_parent import BaseTest
 import util
 from page import *
