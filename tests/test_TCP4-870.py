@@ -18,7 +18,6 @@ class TestLoginUser(BaseTest):
         # Load server url
         self.driver.get(data['server_url'])
  
-
     def test_correct_login(self):
         '''TCS4_870 Verify the login for an active user'''
         # Load login page.
