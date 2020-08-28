@@ -2,6 +2,7 @@
 
 # Check if using local environment
 from os import getenv
+from os import environ
 
 if getenv('ENVIRONMENT') != 'local':
     from test_parent import BaseTest
