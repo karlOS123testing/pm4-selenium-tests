@@ -15,11 +15,21 @@ class PageMenu:
         self.data = data
         self.wait = WebDriverWait(self.driver, 30)
 
+    def paths_menu(self):
+        ''' Function to get page elements. '''
+        self.avatar = self.wait.until(EC.visibility_of_element_located((By.ID, 'avatarMenu')))
+
     def goto_admin(self):
         ''' Function to navigate to the admin tab. '''
         self.driver.get(self.data['server_url'] + '/admin/users')
 
     def goto_request(self):
         ''' Function to navigate to the request tab. '''
-        self.driver.get(self.data['server_url'] + 'requests')
+        self.driver.get(self.data['server_url'] + 'request')
 
+    def log_out(self):
+        ''' Logs out the current user '''
+        self.paths_menu()
+        self.avatar.click()
+        self.logout_button = self.wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "li>a[href='/logout']")))
+        self.logout_button.click()

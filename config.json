@@ -6,5 +6,9 @@
   {
     "name": "test-login-long-username",
     "path": "tests/test_TCP4_1.py"
+  },
+  {
+    "name": "test-login-long-username",
+    "path": "tests/test_TCP4_2.py"
   }
 ]
