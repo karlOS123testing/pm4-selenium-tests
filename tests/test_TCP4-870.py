@@ -24,7 +24,7 @@ class TestLoginUser(BaseTest):
         # Load login page.
         login_page = LoginPage(self.driver, data)
         login_page.login()
-        # Verify the URL        
+        # Verify the URL
         self.assertEqual(self.driver.current_url,data['server_url'] + 'requests')
 
 if __name__ == "__main__":
