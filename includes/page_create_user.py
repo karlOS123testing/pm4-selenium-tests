@@ -51,11 +51,7 @@ class PageCreateUser:
         self.new_user_title.send_keys(self.user_information)
         self.new_user_status.click()
         self.new_user_select_status.click()
-<<<<<<< HEAD
         self.new_user_email.send_keys(util.generate_text())
-=======
-        self.new_user_email.send_keys(util.get_random_string(8)+"@processmaker.com")
->>>>>>> TCP4_2
         self.new_user_password.send_keys(self.user_pass)
         self.new_user_confpassword.send_keys(self.user_pass)
         self.new_user_save.click()
