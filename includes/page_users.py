@@ -4,9 +4,22 @@
 # Check if using local environment
 from os import getenv
 
+if getenv('ENVIRONMENT') != 'local':
+    from page_create_user import PageCreateUser
+    from page_user_information import PageUserInformation
+    from page_menu import PageMenu
+
+# If using local environment
+else:
+    from includes.page_create_user import PageCreateUser
+    from includes.page_user_information import PageUserInformation
+    from includes.page_menu import PageMenu
+
+
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 import time
 
 
@@ -39,3 +52,27 @@ class PageUsers:
         ''' Function to edit a non admin user. '''
         self.paths_users()
         self.non_admin_user.click()
+
+    def create_user(self):
+        ''' Crerates a new user using fill_new_user '''
+        self.paths_users()
+        self.create_user_button.click()
+        PageCreateUser(self.driver, self.data).fill_new_user()
+        self.create_user_succes = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class='alert d-none d-lg-block alertBox alert-dismissible alert-success']")))
+
+    def check_users_exists(self):
+        ''' Check if there are 2 users, create one if not'''
+
+        # User check
+        try:    # changes the non-admin user password if it already exists
+            self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//td[text() = '12']/following-sibling::td[@class='vuetable-slot'][2]")))
+            PageUsers(self.driver, self.data).edit_non_admin()
+            PageUserInformation(self.driver, self.data).change_password()
+            PageMenu(self.driver, self.data).goto_request()
+            return True
+
+        # Need to run test to find exact exception type
+        except TimeoutException:
+            PageUsers(self.driver, self.data).create_user()
+            PageMenu(self.driver, self.data).goto_request()
+            return False
