@@ -3,11 +3,11 @@
 """
 from os import getenv
 
-""" if getenv('ENVIRONMENT') != 'local':
+if getenv('ENVIRONMENT') != 'local':
     from test_classes import CustomTextTestRunner, CustomTestLoader
 # If using local environment
-else: """
-from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+else:
+    from includes.test_classes import CustomTextTestRunner, CustomTestLoader
 
 
 import random
