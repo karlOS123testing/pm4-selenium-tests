@@ -1,18 +1,12 @@
 #!/usr/local/bin/python3
 """ User Info Page class. """
 from os import getenv
-# Check if using local environment
-if getenv('ENVIRONMENT') == 'local':
-    # Import sys.path to add the /includes directory to the path
-    # This matches the docker executor's path so local test imports match
-    # remote Trogdor test imports
-    from sys import path
-    path.append('../includes')
-    # Import __init__ to include data configuration
-    from __init__ import data
 
-
-from includes import util
+if getenv('ENVIRONMENT') != 'local':
+    import util
+# If using local environment
+else:
+    from includes import util
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By

@@ -1,20 +1,13 @@
 #!/usr/local/bin/python3
-from os import getenv
-# Check if using local environment
-if getenv('ENVIRONMENT') == 'local':
-    # Import sys.path to add the /includes directory to the path
-    # This matches the docker executor's path so local test imports match
-    # remote Trogdor test imports
-    from sys import path
-    path.append('../includes')
-    # Import __init__ to include data configuration
-    from __init__ import data
-
-
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
+from os import getenv
 
-from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+if getenv('ENVIRONMENT') != 'local':
+    from test_classes import CustomTextTestRunner, CustomTestLoader
+# If using local environment
+else:
+    from includes.test_classes import CustomTextTestRunner, CustomTestLoader
 
 
 import random
