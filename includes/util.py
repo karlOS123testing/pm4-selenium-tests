@@ -1,12 +1,24 @@
 #!/usr/local/bin/python3
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
+from os import getenv
+
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
+    from sys import path
+    path.append('../includes')
+    # Import __init__ to include data configuration
+    from __init__ import data
+
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 import random
 import string
 from contextlib import redirect_stdout
 from io import StringIO
-from .test_classes import CustomTextTestRunner, CustomTestLoader
+import re
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """
@@ -37,9 +49,10 @@ from .test_classes import CustomTextTestRunner, CustomTestLoader
             Used to generate a random string of text 10 characters long.
 
         generate_email:
-            Used to generate a randome email address. 
+            Used to generate a randome email address.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 def run_test(classname, data, modulename):
     ''' Function to run test and redirect output from stdout
