@@ -26,6 +26,7 @@ from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class TCP4_614(BaseTest):
     ''' Test that the country of an user can be changed '''
 
@@ -37,10 +38,10 @@ class TCP4_614(BaseTest):
 
         # Redirect to Admin Users page, wait for +User button to be clickable 
         PageMenu(self.driver, data).goto_admin()
-        
+
         # Find table record with ID = '2', find edit button in this element, and click
         PageUsers(self.driver, data).check_users_exists()
-        
+
         # Wait for user edit form to load, changes the country and save
         PageMenu(self.driver, data).goto_admin()
         PageUsers(self.driver, data).edit_non_admin()
@@ -51,6 +52,7 @@ class TCP4_614(BaseTest):
         PageUsers(self.driver, data).edit_non_admin()
         PageUserInformation(self.driver, data).confirm_country('bolivia')
 
+
 if __name__ == "__main__":
-    import __main__  
+    import __main__
     output = run_test(TCP4_614, data, __main__)

@@ -82,7 +82,7 @@ class PageUserInformation:
 
         self.char_set = string.ascii_letters
         self.user_pass = util.generate_text()
-        
+
     def goto_user_permissions(self):
         ''' Click on the user permissions tab'''
         self.paths_user_information()
