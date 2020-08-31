@@ -3,25 +3,26 @@
 # Check if using local environment
 from os import getenv
 
-if getenv('ENVIRONMENT') != 'local':
-    from test_parent import BaseTest
-    from util import run_test
-    from page_login import PageLogin
-    from page_users import PageUsers
-    from page_menu import PageMenu 
-
-    
-# If using local environment
-else:
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
     from sys import path
-    path.append('../')
-    from includes.test_parent import BaseTest
-    from includes.util import run_test
-    from includes.page_login import PageLogin
+    path.append('../includes')
+    # Import __init__ to include data configuration
     from __init__ import data
-    from includes.page_users import PageUsers
-    from includes.page_menu import PageMenu
+# Import BaseTest class where webdriver instance is created
+from test_parent import BaseTest
+# Import util file where all helper functions are located
+import util
+# Import all page classes
+from page import *
+# Import Python unittest module
+import unittest
 
+from page_login import PageLogin
+from page_users import PageUsers
+from page_menu import PageMenu 
 
 class TCP4_1(BaseTest):
     ''' a string of 60 scharacters can be used in the user search input '''
@@ -41,4 +42,4 @@ class TCP4_1(BaseTest):
         
 if __name__ == "__main__":
     import __main__
-    output = run_test(TCP4_1, data, __main__)
+    output = util.run_test(TCP4_1, data, __main__)

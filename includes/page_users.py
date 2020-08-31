@@ -4,6 +4,7 @@
 # Check if using local environment
 from os import getenv
 
+<<<<<<< HEAD
 if getenv('ENVIRONMENT') != 'local':
     from page_create_user import PageCreateUser
     from page_user_information import PageUserInformation
@@ -14,6 +15,18 @@ else:
     from includes.page_create_user import PageCreateUser
     from includes.page_user_information import PageUserInformation
     from includes.page_menu import PageMenu
+=======
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
+    from sys import path
+    path.append('../includes')
+    # Import __init__ to include data configuration
+    from __init__ import data
+
+from page_menu import PageMenu
+>>>>>>> TCP4_1
 
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
@@ -75,4 +88,8 @@ class PageUsers:
         except TimeoutException:
             PageUsers(self.driver, self.data).create_user()
             PageMenu(self.driver, self.data).goto_request()
+<<<<<<< HEAD
             return False
+=======
+            return False
+>>>>>>> TCP4_1

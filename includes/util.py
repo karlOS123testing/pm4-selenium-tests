@@ -3,12 +3,16 @@
 """
 from os import getenv
 
-if getenv('ENVIRONMENT') != 'local':
-    from test_classes import CustomTextTestRunner, CustomTestLoader
-# If using local environment
-else:
-    from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
+    from sys import path
+    path.append('../includes')
+    # Import __init__ to include data configuration
+    from __init__ import data
 
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 import random
 import string
@@ -26,24 +30,18 @@ import re
                 "message" may be test_output, which contains the Python unittest
                     output redirected into a buffer, or log[-1], which contains
                     the last custom log message appended during a test.
-
         parse_results:
             Used to transform test_output into a SUCCESS / FAIL result.
-
         parse_log_error:
             Used to search an html page source for 'ERROR' and capture the 'ERROR'
                 message. Useful for login.
-
         parse_log_warning:
             Used to search an html page source for 'WARNING' and capture the 'WARNING'
                 message. Useful for login.
-
         generate_long_text:
             Used to generate a random string of text 95 characters long.
-
         generate_text:
             Used to generate a random string of text 10 characters long.
-
         generate_email:
             Used to generate a randome email address. 
 """
