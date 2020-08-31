@@ -38,3 +38,4 @@ class PageLogin:
         self.login_button.click()
 
         return self.driver
+        
