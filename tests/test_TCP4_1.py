@@ -22,7 +22,8 @@ import unittest
 
 from page_login import PageLogin
 from page_users import PageUsers
-from page_menu import PageMenu 
+from page_menu import PageMenu
+
 
 class TCP4_1(BaseTest):
     ''' a string of 60 scharacters can be used in the user search input '''
@@ -38,8 +39,8 @@ class TCP4_1(BaseTest):
 
         # Insert the 60 characters string on the searchbar
         self.assertTrue(PageUsers(self.driver, data).search_long_string())
-        
-        
+
+
 if __name__ == "__main__":
     import __main__
     output = util.run_test(TCP4_1, data, __main__)
