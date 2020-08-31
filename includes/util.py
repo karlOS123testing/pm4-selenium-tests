@@ -3,12 +3,16 @@
 """
 from os import getenv
 
-""" if getenv('ENVIRONMENT') != 'local':
-    from test_classes import CustomTextTestRunner, CustomTestLoader
-# If using local environment
-else: """
-from includes.test_classes import CustomTextTestRunner, CustomTestLoader
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
+    from sys import path
+    path.append('../includes')
+    # Import __init__ to include data configuration
+    from __init__ import data
 
+from test_classes import CustomTextTestRunner, CustomTestLoader
 
 import random
 import string
