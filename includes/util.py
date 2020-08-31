@@ -1,6 +1,9 @@
 #!/usr/local/bin/python3
 """ Module to contain helper functions that cut down on redundant code in main calls.
 """
+#!/usr/local/bin/python3
+""" Module to contain helper functions that cut down on redundant code in main calls.
+"""
 from os import getenv
 
 if getenv('ENVIRONMENT') == 'local':

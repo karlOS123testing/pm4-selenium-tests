@@ -14,7 +14,7 @@ if getenv('ENVIRONMENT') == 'local':
 
 
 from test_parent import BaseTest
-from util import run_test
+import util
 from __init__ import data
 from page_login import PageLogin
 from page_menu import PageMenu
@@ -45,4 +45,5 @@ class TCP4_2(BaseTest):
 
 if __name__ == "__main__":
     import __main__
-    output = run_test(TCP4_2, data, __main__)
+    output = util.run_test(TCP4_2, data, __main__)
+

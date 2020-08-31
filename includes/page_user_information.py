@@ -2,11 +2,16 @@
 """ User Info Page class. """
 from os import getenv
 
-if getenv('ENVIRONMENT') != 'local':
-    import util
-# If using local environment
-else:
-    from includes import util
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
+    from sys import path
+    path.append('../includes')
+    # Import __init__ to include data configuration
+    from __init__ import data
+
+import util
 
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
@@ -77,7 +82,7 @@ class PageUserInformation:
 
         self.char_set = string.ascii_letters
         self.user_pass = util.generate_text()
-        
+
     def goto_user_permissions(self):
         ''' Click on the user permissions tab'''
         self.paths_user_information()
