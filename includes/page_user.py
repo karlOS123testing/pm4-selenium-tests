@@ -39,4 +39,3 @@ class PageUsers:
         ''' Function to edit a non admin user. '''
         self.paths_users()
         self.non_admin_user.click()
-

@@ -43,9 +43,10 @@ import re
         generate_text:
             Used to generate a random string of text 10 characters long.
         generate_email:
-            Used to generate a randome email address. 
+            Used to generate a randome email address.
 """
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 def run_test(classname, data, modulename):
     ''' Function to run test and redirect output from stdout
