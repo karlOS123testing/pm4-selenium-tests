@@ -3,24 +3,22 @@
 # Check if using local environment
 from os import getenv
 
-if getenv('ENVIRONMENT') != 'local':
-    from test_parent import BaseTest
-    from util import run_test
-    from page_login import PageLogin
-    from page_menu import PageMenu
-    from page_users import PageUsers
-    from page_user_information import PageUserInformation
-# If using local environment
-else:
+if getenv('ENVIRONMENT') == 'local':
+    # Import sys.path to add the /includes directory to the path
+    # This matches the docker executor's path so local test imports match
+    # remote Trogdor test imports
     from sys import path
-    path.append('../')
-    from includes.test_parent import BaseTest
-    from includes.util import run_test
-    from includes.page_login import PageLogin
-    from includes.page_menu import PageMenu
-    from includes.page_users import PageUsers
-    from includes.page_user_information import PageUserInformation
+    path.append('../includes')
+    # Import __init__ to include data configuration
     from __init__ import data
+
+
+from test_parent import BaseTest
+from util import run_test
+from page_login import PageLogin
+from page_menu import PageMenu
+from page_users import PageUsers
+from page_user_information import PageUserInformation
 
 import unittest
 import time
