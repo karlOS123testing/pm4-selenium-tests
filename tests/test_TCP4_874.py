@@ -40,9 +40,10 @@ class TCP4_874(BaseTest):
         
         noExistUser = PageUsers(self.driver, data).searchUser('userInactive1')
         if noExistUser == True:
+            print('user does not exist')
             PageUsers(self.driver, data).create_inactive_user('userInactive1', '1n4ct1v3Us3r', 'test@incative1user.test', 'Inactive')
         else:
-            pass
+            print('user exists')
         
         PageMenu(self.driver, data).log_out()
         

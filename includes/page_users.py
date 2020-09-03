@@ -68,18 +68,19 @@ class PageUsers:
         self.searchBox= self.driver.find_element_by_xpath("//*[@id='search']/div/input")
         self.searchBox.send_keys(findName)
 
-        #try:
-            #self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[2]/table/tbody/tr/td")))
-        self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text          
-        if self.existUsers == 'sLoading':
-            print("no user found")
-            return True
-        else:
+        try:
+        #self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[2]/table/tbody/tr/td"))).text
+            self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text          
+            print(self.existUsers)
+            if self.existUsers == 'No Data Available':
+                print("no user found")
+                return True
+            else:
+                print("ok user found")
+                return False
+        except TimeoutException:
             print("ok user found")
             return False
-
-        #except TimeoutException:
-        #    print("ok user found")
             
             
         
