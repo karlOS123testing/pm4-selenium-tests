@@ -69,7 +69,6 @@ class PageUsers:
         self.searchBox.send_keys(findName)
 
         try:
-        #self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[2]/table/tbody/tr/td"))).text
             self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text          
             print(self.existUsers)
             if self.existUsers == 'No Data Available':

@@ -29,30 +29,30 @@ class TCP4_874(BaseTest):
     ''' Verify the login for an inactive user '''
 
     def test_tcp4_874(self):
-        '''Edits an users country'''
-        # My first comment
+        '''Verify the login for an incative user'''
 
-        # Login using configured url, workspace, username, and password
+        # Login using configured url, workspace, username, and password as Administrator user
         self.driver = PageLogin(self.driver, data).login()
 
-        # Redirect to Admin Users page, wait for +User button to be clickable
+        # Redirect to Admin Users page
         PageMenu(self.driver, data).goto_admin()
         
+        # Validate if the user exists
         noExistUser = PageUsers(self.driver, data).searchUser('userInactive1')
         if noExistUser == True:
             print('user does not exist')
             PageUsers(self.driver, data).create_inactive_user('userInactive1', '1n4ct1v3Us3r', 'test@incative1user.test', 'Inactive')
         else:
             print('user exists')
-        
+
+        # Logout as Administrator user
         PageMenu(self.driver, data).log_out()
         
+        # Login using configured url, workspace, username, and password as an Inactive user
         self.driver = PageLogin(self.driver, data).loginNoAdmin('userInactive1','1n4ct1v3Us3r')
 
+        # The inactive user does not access
         self.assertEqual(self.driver.current_url,data['server_url'] + '/login')
-
-
-
 
 if __name__ == "__main__":
     import __main__
