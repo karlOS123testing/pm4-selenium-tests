@@ -69,38 +69,23 @@ class PageUsers:
         self.searchBox.send_keys(findName)
 
         try:
-            self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text          
-            print(self.existUsers)
+            #self.existUsers1 = self.driver.find_element_by_css_selector('div #nav-users')
+            existUsers1 = self.driver.find_element_by_css_selector('div#nav-users')
+            print(existUsers1)
+            self.existUsers = existUsers1.find_element_by_css_selector('//h3[class="display-6"]').text
+
+            # self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text
+            # self.existUsers = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//*[@id='users-listing']/div[2]/div/div[1]/div/div/h3"))).text          
+            print("** "+self.existUsers+" **")
             if self.existUsers == 'No Data Available':
-                print("no user found")
+                print("1 no user found")
                 return True
             else:
-                print("ok user found")
+                print("2 ok user found")
                 return False
         except TimeoutException:
-            print("ok user found")
+            print("3 ok user found")
             return False
-            
-            
-        
-        
-        #self.testvalue = self.driver.find_element_by_xpath("//*[text() = 'testUser']")
-
-        # User check
-        #try:    # changes the non-admin user password if it already exists
-        #    self.non_admin_user = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//td[text() = '12']/following-sibling::td[@class='vuetable-slot'][2]")))
-        #    PageUsers(self.driver, self.data).edit_non_admin()
-            #PageUserInformation(self.driver, self.data).change_password()
-            #PageMenu(self.driver, self.data).goto_request()
-        #    return True
-
-        # Need to run test to find exact exception type
-        #except TimeoutException:
-        #    PageUsers(self.driver, self.data).create_user()
-        #    PageMenu(self.driver, self.data).goto_request()
-
-        #    return False
-        
 
     def create_inactive_user(self, username, password, email, status):
         ''' Create an inactive user'''

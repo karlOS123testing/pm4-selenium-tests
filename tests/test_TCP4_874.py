@@ -37,11 +37,17 @@ class TCP4_874(BaseTest):
         # Redirect to Admin Users page
         PageMenu(self.driver, data).goto_admin()
         
+        # new user information
+        user = 'userInactive100'
+        password = '1n4ct1v3Us3r'
+        email = 'test@incative100user.test'
+        status = 'Inactive'
+
         # Validate if the user exists
-        noExistUser = PageUsers(self.driver, data).searchUser('userInactive1')
+        noExistUser = PageUsers(self.driver, data).searchUser(user)
         if noExistUser == True:
             print('user does not exist')
-            PageUsers(self.driver, data).create_inactive_user('userInactive1', '1n4ct1v3Us3r', 'test@incative1user.test', 'Inactive')
+            PageUsers(self.driver, data).create_inactive_user(user, password, email, status)
         else:
             print('user exists')
 
@@ -49,7 +55,7 @@ class TCP4_874(BaseTest):
         PageMenu(self.driver, data).log_out()
         
         # Login using configured url, workspace, username, and password as an Inactive user
-        self.driver = PageLogin(self.driver, data).loginNoAdmin('userInactive1','1n4ct1v3Us3r')
+        self.driver = PageLogin(self.driver, data).loginNoAdmin(user,password)
 
         # The inactive user does not access
         self.assertEqual(self.driver.current_url,data['server_url'] + '/login')
